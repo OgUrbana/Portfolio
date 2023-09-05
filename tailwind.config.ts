@@ -16,6 +16,17 @@ const config: Config = {
           1: 'rgb(var(--color-bkg) / <alpha-value>)',
           2: 'rgb(var(--color-bkg-2) / <alpha-value>)',
         },
+        white: {
+          900: '#FFFFFF',
+          800: '#F3F8FF',
+          500: '#6F74A7',
+        },
+        black: {
+          0: '#000000',
+          200: '#151E2C',
+          300: '#29374C',
+          400: '#778295',
+        },
       },
       fontSize: {
         sm: ['0.875rem', '155%'],
