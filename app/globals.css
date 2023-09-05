@@ -12,13 +12,20 @@
     :root {
       --color-primary: 66 141 255;
       --color-bkg: 21 30 44;
-      --color-bkg-2: 41 55 76;
+      --color-bkg-2: 25 35 51;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-primary: 2 82 205;
+      --color-bkg: 255 255 255;
+      --color-bkg-2: 243 248 255;
     }
   }
   :root[data-theme='dark'] {
     --color-primary: 66 141 255;
     --color-bkg: 21 30 44;
-    --color-bkg-2: 41 55 76;
+    --color-bkg-2: 25 35 51;
   }
   :root[data-theme='light'] {
     --color-primary: 2 82 205;

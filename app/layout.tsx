@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 
 import './globals.css';
+import { ThemeProvider } from '@/components/ThemeProvider';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -21,9 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className='dark bg-background-1'>
-      <body className={poppins.className}>
-        <main className=''>{children}</main>
+    <html lang='en' suppressHydrationWarning>
+      <body className={`${poppins.className} bg-background-2`}>
+        <ThemeProvider attribute='data-theme'>
+          <main className=''>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
