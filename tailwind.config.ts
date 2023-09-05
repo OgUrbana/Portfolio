@@ -17,6 +17,10 @@ const config: Config = {
           2: 'rgb(var(--color-bkg-2) / <alpha-value>)',
         },
       },
+      fontSize: {
+        sm: ['0.875rem', '155%'],
+        smallBold: ['0.875rem', '145%'],
+      },
     },
   },
   plugins: [],

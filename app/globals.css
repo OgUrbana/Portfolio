@@ -26,3 +26,60 @@
     --color-bkg-2: 243 248 255;
   }
 }
+
+/* Custom Utility Classes */
+@layer utilities {
+  /* Typography */
+  .base {
+    @apply font-normal;
+    font-size: 1.5rem;
+    line-height: 130%;
+  }
+  .base-bold {
+    @apply font-semibold;
+    font-size: 1.5rem;
+    line-height: 130%;
+  }
+}
+
+/* Typography */
+
+h1 {
+  @apply font-bold;
+  font-size: 4rem;
+  line-height: 130%;
+}
+
+h2 {
+  @apply font-bold;
+  font-size: 3rem;
+  line-height: 115%;
+}
+
+h3 {
+  @apply font-semibold;
+  font-size: 2rem;
+  line-height: 105%;
+}
+
+p {
+  @apply font-normal;
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+
+p.bold {
+  @apply font-semibold;
+  font-size: 1.25rem;
+  line-height: 130%;
+}
+
+small {
+  font-weight: normal;
+  @apply text-sm;
+}
+
+small.bold {
+  @apply font-semibold;
+  @apply text-smallBold;
+}
