@@ -12,17 +12,81 @@
     :root {
       --color-primary: 66 141 255;
       --color-bkg: 21 30 44;
-      --color-bkg-2: 41 55 76;
+      --color-bkg-2: 25 35 51;
+    }
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --color-primary: 2 82 205;
+      --color-bkg: 255 255 255;
+      --color-bkg-2: 243 248 255;
     }
   }
   :root[data-theme='dark'] {
     --color-primary: 66 141 255;
     --color-bkg: 21 30 44;
-    --color-bkg-2: 41 55 76;
+    --color-bkg-2: 25 35 51;
   }
   :root[data-theme='light'] {
     --color-primary: 2 82 205;
     --color-bkg: 255 255 255;
     --color-bkg-2: 243 248 255;
   }
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  /* Typography */
+  .base {
+    @apply font-normal;
+    font-size: 1.5rem;
+    line-height: 130%;
+  }
+  .base-bold {
+    @apply font-semibold;
+    font-size: 1.5rem;
+    line-height: 130%;
+  }
+}
+
+/* Typography */
+
+h1 {
+  @apply font-bold;
+  font-size: 4rem;
+  line-height: 130%;
+}
+
+h2 {
+  @apply font-bold;
+  font-size: 3rem;
+  line-height: 115%;
+}
+
+h3 {
+  @apply font-semibold;
+  font-size: 2rem;
+  line-height: 105%;
+}
+
+p {
+  @apply font-normal;
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+
+p.bold {
+  @apply font-semibold;
+  font-size: 1.25rem;
+  line-height: 130%;
+}
+
+small {
+  font-weight: normal;
+  @apply text-sm;
+}
+
+small.bold {
+  @apply font-semibold;
+  @apply text-smallBold;
 }
