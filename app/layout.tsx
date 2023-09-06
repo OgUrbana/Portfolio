@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google';
 
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import Navigation from '@/components/Nav/Navigation';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body className={`${poppins.className} bg-background-2`}>
         <ThemeProvider attribute='data-theme'>
+          <Navigation />
           <main className=''>{children}</main>
         </ThemeProvider>
       </body>
