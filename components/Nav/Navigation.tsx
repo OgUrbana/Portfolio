@@ -1,23 +1,40 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import Download from './Icons/Download';
 import ToggleTheme from './ToggleTheme';
-import Link from 'next/link';
-
-// className={`${
-// 	pathname === '/'
-// 		? 'font-semibold text-primary'
-// 		: 'text-white-500 dark:text-white-800'
-// } transition ease-in-out`}
 
 const Navigation = () => {
+  const [isScroll, setIsScroll] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const offset = 50;
+    function onScroll() {
+      if (!isScroll && window.scrollY > offset) {
+        setIsScroll(true);
+      } else if (isScroll && window.scrollY <= offset) {
+        setIsScroll(false);
+      }
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', onScroll, true);
+    };
+  }, [isScroll]);
+
   return (
-    <nav className='sticky top-0 z-40 w-full bg-background-2/95 backdrop-blur transition-colors duration-500 lg:z-50'>
-      <section className='padding-layout flex items-center justify-between'>
+    <nav
+      className={
+        'sticky top-0 z-40 w-full backdrop-blur transition-colors duration-500 lg:z-50' +
+        `${isScroll ? ' bg-background-2/75' : ''}`
+      }
+    >
+      <section className='padding-layout flex items-center justify-between py-9'>
         <div>Logo</div>
         <section className='flex items-center gap-8'>
           <ul className='flex gap-4' id='navList'>
@@ -49,11 +66,12 @@ const Navigation = () => {
             </li>
             <li>
               <Link
-                href='/contact'
+                href='/resume'
                 className={`${
-                  pathname === '/contact' ? 'navActive' : 'navLink'
+                  pathname === '/resume' ? 'navActive' : 'navLink'
                 }`}
               >
+                <Download />
                 Resume
               </Link>
             </li>

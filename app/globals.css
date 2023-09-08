@@ -48,7 +48,7 @@
     line-height: 130%;
   }
   .padding-layout {
-    @apply max-w-[1440px] mx-auto px-[85px] py-9;
+    @apply max-w-[1440px] mx-auto px-[85px];
   }
 
   .small {
@@ -82,6 +82,8 @@
   .navLink {
     @apply text-white-500 dark:text-white-800 transition ease-in-out duration-100;
     @apply hover:text-primary;
+    @apply flex items-center gap-2;
+    @apply fill-white-500 hover:fill-primary dark:fill-white-800 dark:hover:fill-primary;
   }
 }
 

@@ -14,7 +14,8 @@
     "css": "css",
     "jsx": "jsx",
     "typescript": "typescript",
-    "tsx": "tsx"
+    "tsx": "tsx",
+    "svg": "svg"
   },
   "editor.quickSuggestions": {
     "strings": true
