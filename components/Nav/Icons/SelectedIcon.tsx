@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import MonitorIcon from './Icons/MonitorIcon';
-import MoonIcon from './Icons/MoonIcon';
-import SunIcon from './Icons/SunIcon';
+import MonitorIcon from './MonitorIcon';
+import MoonIcon from './MoonIcon';
+import SunIcon from './SunIcon';
 import { useTheme } from 'next-themes';
 
 const SelectedIcon = () => {

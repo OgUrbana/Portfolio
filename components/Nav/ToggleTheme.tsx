@@ -1,11 +1,13 @@
+'use client';
+
 import React from 'react';
 import { useTheme } from 'next-themes';
-import { Listbox } from '@headlessui/react';
+import { Listbox, Transition } from '@headlessui/react';
 import SunIcon from './Icons/SunIcon';
 import MoonIcon from './Icons/MoonIcon';
 import MonitorIcon from './Icons/MonitorIcon';
 import { SettingsType } from './types';
-import SelectedIcon from './SelectedIcon';
+import SelectedIcon from './Icons/SelectedIcon';
 
 const settings: SettingsType[] = [
   {
@@ -41,22 +43,31 @@ export const ToggleTheme = () => {
         <SelectedIcon />
       </Listbox.Button>
       <div className='absolute'>
-        <Listbox.Options
-          className={
-            'relative left-72 top-24 w-36 rounded-lg bg-background-1 py-2'
-          }
+        <Transition
+          enter='transition ease-in duration-100'
+          enterFrom='opacity-0'
+          enterTo='opacity-100'
+          leave='transition ease-in duration-100'
+          leaveFrom='opacity-100'
+          leaveTo='opacity-0'
         >
-          {settings.map(({ value, label, icon }) => (
-            <Listbox.Option
-              key={value}
-              value={value}
-              className='flex cursor-pointer items-center gap-2 p-1 pl-3 hover:bg-background-2'
-            >
-              {icon(theme ?? 'system', 'h-6 w-6')}
-              {label}
-            </Listbox.Option>
-          ))}
-        </Listbox.Options>
+          <Listbox.Options
+            className={
+              'relative right-24 top-20 w-36 rounded-lg border border-white-500/30 bg-background-1 py-2 lg:left-72 lg:top-24'
+            }
+          >
+            {settings.map(({ value, label, icon }) => (
+              <Listbox.Option
+                key={value}
+                value={value}
+                className='flex cursor-pointer items-center gap-2 p-1 pl-3 hover:bg-background-2'
+              >
+                {icon(theme ?? 'system', 'h-6 w-6')}
+                {label}
+              </Listbox.Option>
+            ))}
+          </Listbox.Options>
+        </Transition>
       </div>
     </Listbox>
   );
