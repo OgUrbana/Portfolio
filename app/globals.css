@@ -47,6 +47,44 @@
     font-size: 1.5rem;
     line-height: 130%;
   }
+  .padding-layout {
+    @apply max-w-[1440px] mx-auto px-6 md:px-12 lg:px-[85px];
+  }
+
+  .small {
+    font-weight: normal;
+    @apply text-sm;
+  }
+
+  .smallBold {
+    @apply font-semibold;
+    @apply text-smallBold;
+  }
+
+  .paragraph {
+    @apply font-normal;
+    font-size: 1.25rem;
+    line-height: 150%;
+  }
+
+  .paragraphBold {
+    @apply font-semibold;
+    font-size: 1.25rem;
+    line-height: 130%;
+  }
+
+  /* Navigation */
+
+  .navActive {
+    @apply smallBold text-primary;
+  }
+
+  .navLink {
+    @apply text-white-500 dark:text-white-800 transition ease-in-out duration-100;
+    @apply hover:text-primary;
+    @apply flex items-center gap-2;
+    @apply fill-white-500 hover:fill-primary dark:fill-white-800 dark:hover:fill-primary;
+  }
 }
 
 /* Typography */
@@ -89,4 +127,11 @@ small {
 small.bold {
   @apply font-semibold;
   @apply text-smallBold;
+}
+
+/* Navigation */
+
+#navList,
+li {
+  @apply small;
 }
