@@ -30,7 +30,6 @@ const variants = {
   },
   closed: {
     opacity: 0,
-    // transition: { staggerChildren: 0.05, staggerDirection: -1 },
   },
 };
 
