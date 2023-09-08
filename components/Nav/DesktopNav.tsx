@@ -2,8 +2,10 @@
 
 import Link from 'next/link';
 import React from 'react';
-import Download from './Icons/Download';
 import { usePathname } from 'next/navigation';
+
+import Download from '@/public/icons/download.svg';
+import Divider from '@/public/icons/divider.svg';
 import ToggleTheme from './ToggleTheme';
 
 const DesktopNav = () => {
@@ -44,24 +46,12 @@ const DesktopNav = () => {
               className={`${pathname === '/resume' ? 'navActive' : 'navLink'}`}
               locale={false}
             >
-              <Download />
+              <Download width={14} height={15} />
               Resume
             </Link>
           </li>
         </ul>
-        <svg
-          xmlns='http://www.w3.org/2000/svg'
-          width='2'
-          height='25'
-          viewBox='0 0 2 25'
-          fill='none'
-        >
-          <path
-            d='M1 0.5L0.999999 24.5'
-            stroke='#6F74A7'
-            strokeLinecap='round'
-          />
-        </svg>
+        <Divider />
         <ToggleTheme />
       </section>
     </section>

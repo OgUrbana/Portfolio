@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import MonitorIcon from './MonitorIcon';
-import MoonIcon from './MoonIcon';
-import SunIcon from './SunIcon';
+import MonitorIcon from '@/public/icons/monitor.svg';
+import MoonIcon from '@/public/icons/moon.svg';
+import SunIcon from '@/public/icons/sun.svg';
 import { useTheme } from 'next-themes';
 
 const SelectedIcon = () => {
@@ -24,13 +24,25 @@ const SelectedIcon = () => {
   return (
     <>
       <figure className={theme === 'light' ? 'dark:hidden' : 'hidden'}>
-        <SunIcon selected={theme ?? 'system'} className='h-6 w-6' />
+        <SunIcon
+          className={`h-6 w-6 ${
+            theme === 'light' ? 'fill-primary' : 'fill-white-500'
+          }`}
+        />
       </figure>
       <figure className={theme === 'dark' ? 'dark:inline' : 'hidden'}>
-        <MoonIcon selected={theme ?? 'system'} className='h-6 w-6' />
+        <MoonIcon
+          className={`h-6 w-6 ${
+            theme === 'dark' ? 'fill-primary' : 'fill-white-500'
+          }`}
+        />
       </figure>
       <figure className={theme === 'system' || !theme ? '' : 'hidden'}>
-        <MonitorIcon selected={theme ?? 'system'} className='h-6 w-6' />
+        <MonitorIcon
+          className={`h-6 w-6 stroke-2 ${
+            theme === 'system' ? ' stroke-primary' : ' stroke-white-500'
+          }`}
+        />
       </figure>
     </>
   );
