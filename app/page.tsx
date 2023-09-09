@@ -5,7 +5,9 @@ export default function Home() {
     <section className='padding-layout'>
       <section className='w-full lg:w-5/12'>
         <Hello />
-        <h1>Professional Web Developer based in USA</h1>
+        <h1 className='text-5xl lg:text-6xl'>
+          Professional Web Developer based in USA
+        </h1>
       </section>
     </section>
   );
