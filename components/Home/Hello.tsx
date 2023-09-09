@@ -16,7 +16,7 @@ const titles = [
 
 const Hello = () => {
   return (
-    <h1 className='text-base font-semibold tracking-widest text-primary'>
+    <h1 className='mb-3 h-2 text-base font-semibold tracking-widest text-primary xl:mb-0'>
       <small>{'< "'}</small>Hello World<small>{'" >'}</small> I am{' '}
       <TypeAnimation
         sequence={titles}
