@@ -12,7 +12,7 @@ const CopyButton = ({ content }: { content: string }) => {
   return (
     <Toast.Provider swipeDirection='right'>
       <button
-        className='flex justify-between gap-3 rounded-full bg-white px-5 py-2 text-sm font-semibold leading-[160%] text-white-500 lg:px-6 lg:py-4 '
+        className='flex justify-between gap-3 rounded-full bg-white px-5 py-2 text-sm font-semibold leading-[160%] text-white-500 transition ease-in-out hover:bg-white/80 lg:px-6 lg:py-4 '
         onClick={() => {
           setCopied(false);
           window.clearTimeout(timerRef.current);
@@ -26,11 +26,11 @@ const CopyButton = ({ content }: { content: string }) => {
         <CopyIcon />
       </button>
       <Toast.Root
-        className="grid grid-cols-[auto_max-content] items-center gap-x-[15px] rounded-md bg-background-2 p-[15px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] outline outline-green-500 [grid-template-areas:_'title_action'_'description_action'] data-[swipe=cancel]:translate-x-0 data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[state=closed]:animate-hide data-[state=open]:animate-slideIn data-[swipe=end]:animate-swipeOut data-[swipe=cancel]:transition-[transform_200ms_ease-out]"
+        className="grid grid-cols-[auto_max-content] items-center gap-x-[15px] rounded-md bg-background-2 p-[15px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px]  [grid-template-areas:_'title_action'_'description_action'] data-[swipe=cancel]:translate-x-0 data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[state=closed]:animate-hide data-[state=open]:animate-slideIn data-[swipe=end]:animate-swipeOut data-[swipe=cancel]:transition-[transform_200ms_ease-out]"
         open={copied}
         onOpenChange={setCopied}
       >
-        <Toast.Title className='flex justify-between text-black dark:text-white-500'>
+        <Toast.Title className='flex justify-between'>
           Copied to Clipboard
           <CopyIcon />
         </Toast.Title>
