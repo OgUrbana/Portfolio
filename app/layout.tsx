@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body className={`${poppins.className} bg-background-2`}>
         <ThemeProvider attribute='data-theme'>
-          <header className='sticky top-0 z-40 w-full backdrop-blur transition-colors duration-500 lg:z-50'>
+          <header className='sticky top-0 z-40 backdrop-blur transition-colors duration-500 lg:z-50'>
             <Navigation />
           </header>
           <main className=''>{children}</main>

@@ -5,13 +5,13 @@ import { TypeAnimation } from 'react-type-animation';
 
 const titles = [
   'Matthew Gajo',
-  10000,
+  1000,
   'a Creator',
-  10000,
+  1000,
   'an Innovator',
-  10000,
+  1000,
   'a Developer',
-  10000,
+  1000,
 ];
 
 const Hello = () => {
@@ -23,6 +23,7 @@ const Hello = () => {
         repeat={Infinity}
         className='after:text-white-500'
         speed={25}
+        deletionSpeed={25}
       />
     </h1>
   );
