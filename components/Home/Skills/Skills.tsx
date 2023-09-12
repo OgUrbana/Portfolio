@@ -1,5 +1,4 @@
 import React from 'react';
-// import SkillIcons from './SkillIcons';
 import SkillsTab from './SkillsTab';
 
 const Skills = () => {

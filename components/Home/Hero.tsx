@@ -25,7 +25,7 @@ const Hero = (props: Props) => {
         <section className='flex flex-col justify-center gap-4 md:flex-row'>
           <Link
             href='/case'
-            className='rounded-full bg-primary px-5 py-2 text-sm font-semibold leading-[160%] text-white lg:px-6 lg:py-4'
+            className='rounded-full bg-primary px-5 py-2 text-sm font-semibold leading-[160%] text-white transition duration-300 ease-in-out hover:bg-primary/80 lg:px-6 lg:py-4'
           >
             My Work
           </Link>

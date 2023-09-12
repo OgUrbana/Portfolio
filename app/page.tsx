@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Hero from '@/components/Home/Hero';
-import Skills from '@/components/Home/Skills';
+import Skills from '@/components/Home/Skills/Skills';
 import Services from '@/components/Home/Services';
 import Experience from '@/components/Home/Experience';
 import FeaturedProjects from '@/components/Home/FeaturedProjects';
