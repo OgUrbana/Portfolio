@@ -11,12 +11,14 @@ const projects = [
     tech: ['ReactJS, NextJS', 'Nodejs, Supabase'],
     preview: Morrent,
     bgColor: 'bg-primary',
+    link: '/case',
   },
   {
     title: 'JobIT - A Job Finding Application',
     tech: ['ReactJS, NextJS', 'Nodejs, JSearch'],
     preview: Morrent,
     bgColor: 'bg-[#0BAB7C]',
+    link: '/case',
   },
 ];
 
@@ -50,7 +52,7 @@ const FeaturedProjects = () => {
                 ))}
               </section>
               <Link
-                href='/case'
+                href={project.link}
                 className='flex items-center gap-2 fill-white font-semibold transition duration-300 ease-in-out hover:fill-secondary hover:text-secondary'
               >
                 See Case Study
