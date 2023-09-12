@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import Morrent from '@/public/projects/morrent.png';
 import ArrowIcon from '@/public/icons/arrow.svg';
+import SmallArrow from '@/public/icons/smallarrow.svg';
 
 const projects = [
   {
@@ -45,7 +46,7 @@ const FeaturedProjects = () => {
                 {project.tech.map((tech, index) => (
                   <small
                     key={`tech-${index}`}
-                    className='rounded-lg bg-white/10 p-3 text-xs xl:text-lg'
+                    className='rounded-lg bg-white/10 p-3 text-xs text-white xl:text-lg'
                   >
                     {tech}
                   </small>
@@ -53,7 +54,7 @@ const FeaturedProjects = () => {
               </section>
               <Link
                 href={project.link}
-                className='flex items-center gap-2 fill-white font-semibold transition duration-300 ease-in-out hover:fill-secondary hover:text-secondary'
+                className='flex items-center gap-2 fill-white font-semibold text-white transition duration-300 ease-in-out hover:fill-secondary hover:text-secondary'
               >
                 See Case Study
                 <ArrowIcon />
@@ -67,6 +68,15 @@ const FeaturedProjects = () => {
             </section>
           </article>
         ))}
+        <section className='flex justify-center'>
+          <Link
+            href='/case'
+            className='flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-medium text-white transition duration-300 ease-in-out hover:bg-primary/80'
+          >
+            See more case studies
+            <SmallArrow />
+          </Link>
+        </section>
       </section>
     </section>
   );
