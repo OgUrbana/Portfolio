@@ -3,11 +3,11 @@
 import React from 'react';
 import { useTheme } from 'next-themes';
 import { Listbox, Transition } from '@headlessui/react';
-import SunIcon from './Icons/SunIcon';
-import MoonIcon from './Icons/MoonIcon';
-import MonitorIcon from './Icons/MonitorIcon';
+import SunIcon from '@/public/icons/sun.svg';
+import MoonIcon from '@/public/icons/moon.svg';
+import MonitorIcon from '@/public/icons/monitor.svg';
 import { SettingsType } from './types';
-import SelectedIcon from './Icons/SelectedIcon';
+import SelectedIcon from './SelectedIcon';
 
 const settings: SettingsType[] = [
   {
@@ -62,7 +62,20 @@ export const ToggleTheme = () => {
                 value={value}
                 className='flex cursor-pointer items-center gap-2 p-1 pl-3 hover:bg-background-2'
               >
-                {icon(theme ?? 'system', 'h-6 w-6')}
+                {icon(
+                  theme ?? 'system',
+                  `h-6 w-6 stroke-2 ${
+                    theme === value
+                      ? `${
+                          value === 'system' ? 'stroke-primary' : 'fill-primary'
+                        }`
+                      : `${
+                          value === 'system'
+                            ? 'stroke-white-500'
+                            : 'fill-white-500'
+                        }`
+                  }`,
+                )}
                 {label}
               </Listbox.Option>
             ))}
