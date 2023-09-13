@@ -1,6 +1,9 @@
 import React from 'react';
 
 import AnalyticsIcon from '@/public/icons/analytics.svg';
+import MonitorIcon from '@/public/icons/monitor.svg';
+import ServerIcon from '@/public/icons/server.svg';
+import OptimizeIcon from '@/public/icons/optimize.svg';
 
 const services = [
   {
@@ -11,17 +14,17 @@ const services = [
   {
     title: 'Front-End Dev',
     desc: 'Front-end dev includes creating the user interface and interactive elements of websites and apps.',
-    icon: AnalyticsIcon,
+    icon: MonitorIcon,
   },
   {
     title: 'Back-End Dev',
     desc: 'Back-end dev includes managing API, integrate elements, and managing data.',
-    icon: AnalyticsIcon,
+    icon: ServerIcon,
   },
   {
     title: 'Web Optimization',
     desc: 'Web optimization focuses on improving website performance for a smoother user experience',
-    icon: AnalyticsIcon,
+    icon: OptimizeIcon,
   },
 ];
 
