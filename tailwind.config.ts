@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'contact-banner': 'url("/public/contactbanner.png")',
+      },
       colors: {
         ...blackA,
         ...green,

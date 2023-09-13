@@ -36,6 +36,15 @@
 
 /* Custom Utility Classes */
 @layer utilities {
+  /* animation */
+  .default-animation {
+    @apply transition duration-300 ease-in-out hover:scale-110;
+  }
+  /* Social Icons */
+  .social {
+    @apply fill-black-400 transition duration-300 ease-in-out hover:fill-primary dark:fill-white dark:hover:fill-primary;
+  }
+
   /* Drop Shadows */
 
   .drop-shadow-primary {
