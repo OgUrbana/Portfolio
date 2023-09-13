@@ -6,9 +6,7 @@ import XIcon from '@/public/icons/social/x.svg';
 import LinkedInIcon from '@/public/icons/social/linkedin.svg';
 import GithubIcon from '@/public/icons/social/github.svg';
 
-type Props = {};
-
-const Footer = (props: Props) => {
+const Footer = () => {
   return (
     <footer className='bg-background-1 pb-6 pt-12'>
       <section className='padding-layout'>
@@ -24,10 +22,16 @@ const Footer = (props: Props) => {
             >
               <XIcon className='fill-background-1' />
             </Link>
-            <Link href='' className='default-animation'>
+            <Link
+              href='https://www.linkedin.com/in/matthewgajo/'
+              className='default-animation'
+            >
               <LinkedInIcon className='social' />
             </Link>
-            <Link href='' className='default-animation'>
+            <Link
+              href='https://github.com/OgUrbana'
+              className='default-animation'
+            >
               <GithubIcon className='social' />
             </Link>
           </figure>

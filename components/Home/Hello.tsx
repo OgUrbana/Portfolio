@@ -5,13 +5,13 @@ import { TypeAnimation } from 'react-type-animation';
 
 const titles = [
   'Matthew Gajo',
-  1000,
+  10000,
   'a Creator',
-  1000,
+  10000,
   'an Innovator',
-  1000,
+  10000,
   'a Developer',
-  1000,
+  10000,
 ];
 
 const Hello = () => {

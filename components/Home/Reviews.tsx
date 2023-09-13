@@ -11,7 +11,7 @@ import ArrowRight from '@/public/icons/arrow-right.svg';
 
 const reviews = [
   {
-    name: 'All Might',
+    name: '- All Might',
     image: AllMight,
     title: 'Teacher at U.A & Number 1 Hero',
     rating: 5,
