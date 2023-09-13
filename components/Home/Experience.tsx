@@ -1,10 +1,10 @@
 import React from 'react';
 
 import LineDecoration from '@/public/linedecoration.svg';
-import SlackIcon from '@/public/icons/slack.svg';
-import FireFoxIcon from '@/public/icons/firefox.svg';
-import DigitalOceanIcon from '@/public/icons/digitalocean.svg';
-import MailchimpIcon from '@/public/icons/mailchimp.svg';
+import SlackIcon from '@/public/icons/companies/slack.svg';
+import FireFoxIcon from '@/public/icons/companies/firefox.svg';
+import DigitalOceanIcon from '@/public/icons/companies/digitalocean.svg';
+import MailchimpIcon from '@/public/icons/companies/mailchimp.svg';
 import Link from 'next/link';
 
 const experience = [
