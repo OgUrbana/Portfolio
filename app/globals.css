@@ -36,6 +36,39 @@
 
 /* Custom Utility Classes */
 @layer utilities {
+  /* animation */
+  .default-animation {
+    @apply transition duration-300 ease-in-out hover:scale-110;
+  }
+  /* Social Icons */
+  .social {
+    @apply fill-black-400 transition duration-300 ease-in-out hover:fill-primary dark:fill-white dark:hover:fill-primary;
+  }
+
+  /* Drop Shadows */
+
+  .drop-shadow-primary {
+    box-shadow: 10px 10px 26px 0px #0252cd47;
+  }
+
+  .drop-shadow-black-300 {
+    box-shadow: 0px 1px 20px 0px #1f2e48;
+  }
+
+  .drop-shadow-light {
+    box-shadow: 0px 1px 20px 0px #e0ecff;
+  }
+
+  /* Gradient */
+
+  .purple-gradient {
+    @apply bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent;
+  }
+
+  .yellow-gradient {
+    @apply bg-gradient-to-br from-secondary/80 to-secondary bg-clip-text text-transparent;
+  }
+
   /* Typography */
   .base {
     @apply font-normal;

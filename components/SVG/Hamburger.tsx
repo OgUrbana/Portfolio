@@ -18,7 +18,7 @@ const Hamburger = ({ isOpen }: { isOpen: boolean }) => {
         className={
           isOpen
             ? 'stroke-primary'
-            : 'stroke-black-0 transition duration-200 ease-in-out dark:stroke-white-900'
+            : 'stroke-black transition duration-200 ease-in-out dark:stroke-white'
         }
         variants={{
           closed: { d: 'M 8 2.5 L 24 2.5' },
@@ -37,7 +37,7 @@ const Hamburger = ({ isOpen }: { isOpen: boolean }) => {
         className={
           isOpen
             ? 'stroke-primary'
-            : 'stroke-black-0 transition duration-200 ease-in-out dark:stroke-white-900'
+            : 'stroke-black transition duration-200 ease-in-out dark:stroke-white'
         }
         animate={isOpen ? 'open' : 'closed'}
       />
@@ -46,7 +46,7 @@ const Hamburger = ({ isOpen }: { isOpen: boolean }) => {
         className={
           isOpen
             ? 'stroke-primary'
-            : 'stroke-black-0 transition duration-200 ease-in-out dark:stroke-white-900'
+            : 'stroke-black transition duration-200 ease-in-out dark:stroke-white'
         }
         variants={{
           closed: { d: 'M 12 16.346 L 24 16.346' },

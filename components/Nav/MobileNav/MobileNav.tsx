@@ -19,14 +19,14 @@ const MobileNav = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <section className='padding-layout flex items-center justify-between py-6 lg:hidden'>
+    <section className='mx-6 flex items-center justify-between py-6 md:hidden'>
       <p>Logo</p>
-      <section className='flex items-center gap-3 '>
+      <section className='flex items-center gap-3'>
         <ToggleTheme />
         <motion.div
           variants={sidebar}
           animate={isOpen ? 'open' : 'closed'}
-          className='absolute left-0 top-0 h-screen w-screen bg-background-2'
+          className='absolute left-0 top-0 h-screen w-full min-w-full bg-background-2'
           initial={false}
         />
         <MobileNavLinks isOpen={isOpen} />

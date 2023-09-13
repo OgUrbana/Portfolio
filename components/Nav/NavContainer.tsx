@@ -21,14 +21,7 @@ const NavContainer = ({ children }: { children: ReactNode }) => {
     };
   }, [isScroll]);
   return (
-    <nav
-      className={
-        'sticky top-0 z-40 w-full backdrop-blur transition-colors duration-500 lg:z-50' +
-        `${isScroll ? ' bg-background-2/75' : ''}`
-      }
-    >
-      {children}
-    </nav>
+    <nav className={`${isScroll ? ' bg-background-2/75' : ''}`}>{children}</nav>
   );
 };
 
