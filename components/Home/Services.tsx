@@ -1,9 +1,9 @@
 import React from 'react';
 
-import AnalyticsIcon from '@/public/icons/analytics.svg';
-import MonitorIcon from '@/public/icons/monitor.svg';
-import ServerIcon from '@/public/icons/server.svg';
-import OptimizeIcon from '@/public/icons/optimize.svg';
+import AnalyticsIcon from '@/public/icons/services/analytics.svg';
+import MonitorIcon from '@/public/icons/services/monitor.svg';
+import ServerIcon from '@/public/icons/services/server.svg';
+import OptimizeIcon from '@/public/icons/services/optimize.svg';
 
 const services = [
   {
