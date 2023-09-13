@@ -1,5 +1,3 @@
-import React from 'react';
-
 import LineDecoration from '@/public/linedecoration.svg';
 import SlackIcon from '@/public/icons/companies/slack.svg';
 import FireFoxIcon from '@/public/icons/companies/firefox.svg';

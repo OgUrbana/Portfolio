@@ -1,8 +1,8 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import Morrent from '@/public/projects/morrent.png';
+import JobIt from '@/public/projects/jobit.png';
 import ArrowIcon from '@/public/icons/arrow.svg';
 import SmallArrow from '@/public/icons/smallarrow.svg';
 
@@ -17,7 +17,7 @@ const projects = [
   {
     title: 'JobIT - A Job Finding Application',
     tech: ['ReactJS, NextJS', 'Nodejs, JSearch'],
-    preview: Morrent,
+    preview: JobIt,
     bgColor: 'bg-[#0BAB7C]',
     link: '/case',
   },

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import * as Progress from '@radix-ui/react-progress';
 
 const ProgressBar = ({
@@ -10,7 +10,7 @@ const ProgressBar = ({
   content: string;
   currentProgress: number;
 }) => {
-  const [progress, setProgress] = React.useState(0);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const incrementProgress = async () => {
@@ -42,7 +42,6 @@ const ProgressBar = ({
         value={progress}
       >
         <Progress.Indicator
-          // className='h-full w-full rounded-r-full bg-gradient-to-r from-blue-900 to-blue-600 ease-in-out'
           className='h-full w-full rounded-r-full bg-primary'
           style={{ transform: `translateX(-${100 - progress}%)` }}
         />
