@@ -4,7 +4,6 @@ import Image from 'next/image';
 
 import CopyButton from './CopyButton';
 import Hello from './Hello';
-import computerGIF from '@/public/computer.gif';
 
 type Props = {};
 
@@ -33,9 +32,19 @@ const Hero = (props: Props) => {
         </section>
       </section>
       <section className='flex justify-center'>
-        <figure className=''>
-          <Image src={computerGIF} alt='' priority className='p-6' />
-        </figure>
+        {/* <figure className=''>
+          <Image
+            src={'/public/comp.webm'}
+            alt=''
+            priority
+            className='p-6'
+            width={300}
+            height={300}
+          />
+        </figure> */}
+        <video autoPlay loop muted playsInline>
+          <source src='/comp.webm' type='video/webm' />
+        </video>
       </section>
     </section>
   );
