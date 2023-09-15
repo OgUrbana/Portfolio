@@ -6,10 +6,7 @@ import Services from '@/components/Home/Services';
 import Experience from '@/components/Home/Experience';
 import FeaturedProjects from '@/components/Home/FeaturedProjects';
 import Reviews from '@/components/Home/Reviews';
-import ContactBanner from '@/public/contactbanner.png';
-import ContactBannerSmall from '@/public/contactbannersm.png';
-import Image from 'next/image';
-import Link from 'next/link';
+import GetInTouch from '@/components/GetInTouch';
 
 export default function Home() {
   return (
@@ -29,22 +26,7 @@ export default function Home() {
         </h3>
         <Reviews />
       </section>
-      <section className='bg-background-1 pt-12'>
-        <section className='padding-layout flex justify-center'>
-          <Link href='/contact'>
-            <Image
-              src={ContactBanner}
-              alt='contact background'
-              className='hidden sm:block'
-            />
-            <Image
-              src={ContactBannerSmall}
-              alt='contact background'
-              className='sm:hidden'
-            />
-          </Link>
-        </section>
-      </section>
+      <GetInTouch />
     </section>
   );
 }

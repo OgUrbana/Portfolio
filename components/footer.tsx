@@ -12,25 +12,22 @@ const Footer = () => {
         <section className='flex flex-col items-center justify-center gap-2 pt-8 dark:border-t dark:border-t-black-300 md:flex-row md:justify-between'>
           <small>© 2023 Matthew Gajo. All rights reserved.</small>
           <figure className='flex gap-2'>
-            <Link href='' className='default-animation'>
+            <Link href='' className='default-social'>
               <InstagramIcon className='social' />
             </Link>
             <Link
               href=''
-              className='default-animation rounded-full bg-black-400 hover:bg-primary dark:bg-white dark:hover:bg-primary'
+              className='default-social rounded-full bg-black-400 hover:bg-primary dark:bg-white dark:hover:bg-primary'
             >
               <XIcon className='fill-background-1' />
             </Link>
             <Link
               href='https://www.linkedin.com/in/matthewgajo/'
-              className='default-animation'
+              className='default-social'
             >
               <LinkedInIcon className='social' />
             </Link>
-            <Link
-              href='https://github.com/OgUrbana'
-              className='default-animation'
-            >
+            <Link href='https://github.com/OgUrbana' className='default-social'>
               <GithubIcon className='social' />
             </Link>
           </figure>

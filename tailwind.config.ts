@@ -30,6 +30,7 @@ const config: Config = {
         'black-200': '#151E2C',
         'black-300': '#192333',
         'black-400': '#778295',
+        jobit: '#0BAB7C',
       },
       fontSize: {
         sm: ['0.875rem', '155%'],

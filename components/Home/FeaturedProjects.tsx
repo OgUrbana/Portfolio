@@ -18,7 +18,7 @@ const projects = [
     title: 'JobIT - A Job Finding Application',
     tech: ['ReactJS, NextJS', 'Nodejs, JSearch'],
     preview: JobIt,
-    bgColor: 'bg-[#0BAB7C]',
+    bgColor: 'bg-jobit',
     link: '/case',
   },
 ];
