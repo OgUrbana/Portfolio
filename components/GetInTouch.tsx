@@ -11,11 +11,13 @@ const GetInTouch = () => {
         <Link href='/contact'>
           <Image
             src={ContactBanner}
+            priority
             alt='contact background'
             className='hidden sm:block'
           />
           <Image
             src={ContactBannerSmall}
+            priority
             alt='contact background'
             className='sm:hidden'
           />

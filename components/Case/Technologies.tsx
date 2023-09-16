@@ -1,14 +1,14 @@
-import NextIcon from '@/public/icons/cases/tech/next.svg';
-import TypeScriptIcon from '@/public/icons/cases/tech/ts.svg';
-import CSSIcon from '@/public/icons/cases/tech/css.svg';
-import ReactIcon from '@/public/icons/cases/tech/react.svg';
-import HTMLIcon from '@/public/icons/cases/tech/html.svg';
-import MotionIcon from '@/public/icons/cases/tech/motion.svg';
-import TailwindIcon from '@/public/icons/cases/tech/tailwind.svg';
-import GithubIcon from '@/public/icons/cases/tech/github.svg';
-import GitIcon from '@/public/icons/cases/tech/git.svg';
-import NodeIcon from '@/public/icons/cases/tech/node.svg';
-import SupabaseIcon from 'public/icons/cases/tech/supabase.svg';
+import NextIcon from '@/public/cases/tech/next.svg';
+import TypeScriptIcon from '@/public/cases/tech/ts.svg';
+import CSSIcon from '@/public/cases/tech/css.svg';
+import ReactIcon from '@/public/cases/tech/react.svg';
+import HTMLIcon from '@/public/cases/tech/html.svg';
+import MotionIcon from '@/public/cases/tech/motion.svg';
+import TailwindIcon from '@/public/cases/tech/tailwind.svg';
+import GithubIcon from '@/public/cases/tech/github.svg';
+import GitIcon from '@/public/cases/tech/git.svg';
+import NodeIcon from '@/public/cases/tech/node.svg';
+import SupabaseIcon from 'public/cases/tech/supabase.svg';
 import Link from 'next/link';
 
 type Tech =
@@ -58,7 +58,7 @@ const Technologies = ({ tech }: { tech: Tech[] }) => {
   return (
     <figure className='flex h-fit w-fit flex-wrap justify-center gap-8 rounded-xl bg-background-2 p-4 lg:rounded-full'>
       {filteredTech.map((tech) => (
-        <Link href={tech.link} key={tech.name}>
+        <Link href={tech.link} key={tech.name} aria-label={tech.name}>
           <tech.icon
             className={`default-animation h-8 w-8 hover:scale-125 ${
               tech.name === 'next' ? 'fill-black dark:fill-white' : ''
