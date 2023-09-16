@@ -1,4 +1,3 @@
-import React from 'react';
 import Image from 'next/image';
 
 import Morrent from '@/public/projects/desktop/morrent.png';
@@ -42,19 +41,16 @@ const Page = () => {
       <section className='bg-background-1'>
         <section className='padding-layout flex flex-col place-items-center justify-center gap-8 pt-20 md:grid-cols-2 md:flex-row md:gap-12'>
           {cases.map((study, index) => (
-            <article
-              key={`study-${index}`}
-              className='default-animation group flex w-[90%] flex-col justify-center hover:scale-105 md:w-fit'
-            >
-              <figure
-                className={`h-fit w-fit cursor-pointer rounded-xl px-12 pt-16 ${
-                  'bg-' + study.color
-                }`}
-              >
-                <Image src={study.image} alt='Morrent Laptop Preview' />
-              </figure>
-              <hgroup className='pl-12 pt-6'>
-                <Link href={study.link}>
+            <Link href={study.link} key={`study-${index}`}>
+              <article className='default-animation group flex w-[90%] flex-col justify-center hover:scale-105 md:w-fit'>
+                <figure
+                  className={`h-fit w-fit cursor-pointer rounded-xl px-12 pt-16 ${
+                    'bg-' + study.color
+                  }`}
+                >
+                  <Image src={study.image} alt='Morrent Laptop Preview' />
+                </figure>
+                <hgroup className='pl-12 pt-6'>
                   <h3
                     className={`default-animation ${
                       'group-hover:text-' + study.color
@@ -62,10 +58,10 @@ const Page = () => {
                   >
                     {study.title}
                   </h3>
-                </Link>
-                <p className='text-white-500'>{study.desc}</p>
-              </hgroup>
-            </article>
+                  <p className='text-white-500'>{study.desc}</p>
+                </hgroup>
+              </article>
+            </Link>
           ))}
         </section>
         <GetInTouch />

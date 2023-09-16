@@ -12,7 +12,7 @@ const projects = [
     tech: ['ReactJS, NextJS', 'Nodejs, Supabase'],
     preview: Morrent,
     bgColor: 'bg-primary',
-    link: '/case',
+    link: '/case/morrent',
   },
   {
     title: 'JobIT - A Job Finding Application',
