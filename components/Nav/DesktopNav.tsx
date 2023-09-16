@@ -18,6 +18,7 @@ const DesktopNav = () => {
         <ul className='flex gap-4' id='navList'>
           <li>
             <Link
+              prefetch
               href='/'
               className={`${pathname === '/' ? 'navActive' : 'navLink'}`}
             >
@@ -26,6 +27,7 @@ const DesktopNav = () => {
           </li>
           <li>
             <Link
+              prefetch
               href='/case'
               className={`${pathname === '/case' ? 'navActive' : 'navLink'}`}
             >
@@ -34,6 +36,7 @@ const DesktopNav = () => {
           </li>
           <li>
             <Link
+              prefetch
               href='/contact'
               className={`${pathname === '/contact' ? 'navActive' : 'navLink'}`}
             >
@@ -42,6 +45,7 @@ const DesktopNav = () => {
           </li>
           <li>
             <Link
+              prefetch
               href='/resume.pdf'
               className={`${pathname === '/resume' ? 'navActive' : 'navLink'}`}
               locale={false}

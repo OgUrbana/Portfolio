@@ -71,6 +71,7 @@ const MobileNavLinks = ({ isOpen }: { isOpen: boolean }) => {
           className='my-3'
         >
           <Link
+            prefetch
             href={link.value}
             locale={false}
             className={`base-bold flex items-center gap-3 hover:text-primary ${
