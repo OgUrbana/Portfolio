@@ -1,3 +1,7 @@
+import Link from 'next/link';
+
+import { Tech } from './types';
+
 import NextIcon from '@/public/cases/tech/next.svg';
 import TypeScriptIcon from '@/public/cases/tech/ts.svg';
 import CSSIcon from '@/public/cases/tech/css.svg';
@@ -9,20 +13,6 @@ import GithubIcon from '@/public/cases/tech/github.svg';
 import GitIcon from '@/public/cases/tech/git.svg';
 import NodeIcon from '@/public/cases/tech/node.svg';
 import SupabaseIcon from 'public/cases/tech/supabase.svg';
-import Link from 'next/link';
-
-type Tech =
-  | 'next'
-  | 'typescript'
-  | 'css'
-  | 'react'
-  | 'html'
-  | 'motion'
-  | 'tailwind'
-  | 'github'
-  | 'git'
-  | 'node'
-  | 'supabase';
 
 const techDefs = [
   { name: 'next', icon: NextIcon, link: 'https://www.nextjs.org' },
