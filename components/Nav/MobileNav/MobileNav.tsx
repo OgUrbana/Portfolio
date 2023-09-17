@@ -20,7 +20,7 @@ const MobileNav = () => {
 
   return (
     <section className='mx-6 flex items-center justify-between py-6 md:hidden'>
-      <p>Logo</p>
+      <p>Matthew Gajo</p>
       <section className='flex items-center gap-3'>
         <ToggleTheme />
         <motion.div

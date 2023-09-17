@@ -33,6 +33,7 @@ const ProgressBar = ({
         </small>
       </section>
       <Progress.Root
+        aria-label={`${content} current progress ${currentProgress}%`}
         className='relative h-3 w-full overflow-hidden rounded-full bg-background-2'
         style={{
           // Fix overflow clipping in Safari

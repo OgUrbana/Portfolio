@@ -59,6 +59,7 @@ const Reviews = () => {
       <button
         type='button'
         className='hidden rounded-full bg-background-1 p-3 transition duration-300 ease-in-out hover:bg-primary/60 md:block'
+        aria-label='Previous Review'
         onClick={previousReview}
       >
         <ArrowLeft className='h-6 w-6 stroke-black-200 stroke-2 dark:stroke-white' />
@@ -73,11 +74,13 @@ const Reviews = () => {
           <button
             className='h-fit rounded-full bg-background-1 p-3 transition duration-300 ease-in-out hover:bg-primary/60 md:hidden'
             onClick={previousReview}
+            aria-label='Previous Review'
           >
             <ArrowLeft className='h-6 w-6 stroke-black-200 stroke-2 dark:stroke-white' />
           </button>
           <button
             className='h-fit rounded-full bg-background-1 p-3 transition duration-300 ease-in-out hover:bg-primary/60 md:hidden'
+            aria-label='Next Review'
             onClick={nextReview}
           >
             <ArrowRight className='h-6 w-6 stroke-black-200 stroke-2 dark:stroke-white' />
@@ -109,6 +112,7 @@ const Reviews = () => {
         type='button'
         className='hidden rounded-full bg-background-1 p-3 transition duration-300 ease-in-out hover:bg-primary/60 md:block'
         onClick={nextReview}
+        aria-label='Next Review'
       >
         <ArrowRight className='h-6 w-6 stroke-black-200 stroke-2 dark:stroke-white' />
       </button>
