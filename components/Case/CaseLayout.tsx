@@ -195,7 +195,7 @@ const CaseLayout = ({
             <small className='bold text-primary'>Way of work</small>
             <h3>My Process</h3>
           </hgroup>
-          <section className='flex justify-between'>
+          <section className='flex flex-wrap justify-center gap-8 lg:justify-between'>
             {workProcess.map((step, index) => (
               <figure
                 className='flex flex-col items-center gap-6'
@@ -213,7 +213,9 @@ const CaseLayout = ({
                     className='dark:hidden'
                   />
                 </span>
-                <figcaption className='paragraphBold'>{step.name}</figcaption>
+                <figcaption className='smallBold md:paragraphBold'>
+                  {step.name}
+                </figcaption>
               </figure>
             ))}
           </section>
