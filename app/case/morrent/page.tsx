@@ -1,8 +1,8 @@
 import CaseLayout from '@/components/Case/CaseLayout';
+import { getProjects } from '@/utils';
 
 import Morrent from '@/public/projects/morrent.png';
 import MorrentProblem from '@/public/cases/morrentproblem.png';
-import JobitCase from '@/public/cases/projects/jobit.png';
 
 const description = [
   'Morent, a cutting-edge car rental application that was developed using the MERN stack. The app boasts a dynamic homepage that showcases featured vehicles, along with convenient pickup & drop-off location options & a comprehensive list of available cars.',
@@ -23,14 +23,7 @@ const learnings = [
   'Acquired proficiency in NextJS, React, Supabase, and implemented various features utilizing industry-standard best practices.',
 ];
 
-const projects = [
-  {
-    name: 'Jobit',
-    link: '/case/jobit',
-    image: JobitCase,
-    desc: 'Jobit, a web app made with React, NextJS and JSearch API, links developers to millions of job openings. It offers easy job search by displaying relevant jobs',
-  },
-];
+const projects = getProjects(['jobit']);
 
 const Page = () => {
   return (
