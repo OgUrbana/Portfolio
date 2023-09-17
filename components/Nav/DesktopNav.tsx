@@ -13,7 +13,9 @@ const DesktopNav = () => {
 
   return (
     <section className='padding-layout hidden items-center justify-between py-9 md:flex'>
-      <div>Logo</div>
+      <Link href='/' aria-label='Home'>
+        Matthew Gajo
+      </Link>
       <section className='flex items-center gap-8'>
         <ul className='flex gap-4' id='navList'>
           <li>

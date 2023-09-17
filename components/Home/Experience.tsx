@@ -43,7 +43,7 @@ const Experience = () => {
           Progress and milestones. A simple walkthrough of roles, projects, and
           achievements in my career
         </p>
-        <LineDecoration className='place-self-end fill-white stroke-white stroke-2 dark:stroke-gray-500 sm:w-1/2 md:w-full' />
+        <LineDecoration className='place-self-end fill-white stroke-white stroke-2 dark:fill-black-200 dark:stroke-gray-500 sm:w-1/2 md:w-full' />
       </section>
       <section className='w-full'>
         {experience.map((job, index) => (
