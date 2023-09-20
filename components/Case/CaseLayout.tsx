@@ -1,13 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { ChallengeIcon, SuccessIcon, classNames } from '@/utils';
+import { SuccessIcon, classNames } from '@/utils';
 import { Case } from '@/utils/type';
-import { workProcess } from '@/utils/cases';
 import CaseHero from './CaseHero';
 import CaseStats from './CaseStats';
 import CaseDesc from './CaseDesc';
 import CaseProblem from './CaseProblem';
+import Process from './Process';
+import Challenge from './Challenge';
+import Lesson from './Lesson';
 
 const CaseLayout = ({ data }: { data: Case }) => {
   const { description, problem, challenges, learnings, projects } = data;
@@ -17,38 +19,7 @@ const CaseLayout = ({ data }: { data: Case }) => {
       <CaseStats data={data} />
       <CaseDesc description={description} />
       <CaseProblem problem={problem} />
-      <section className='bg-background-1'>
-        <section className='padding-layout flex flex-col gap-6 p-16 xl:px-72'>
-          <hgroup className='flex flex-col gap-2'>
-            <small className='bold text-primary'>Way of work</small>
-            <h3>My Process</h3>
-          </hgroup>
-          <section className='flex flex-wrap justify-center gap-8 lg:justify-between'>
-            {workProcess.map((step, index) => (
-              <figure
-                className='flex flex-col items-center gap-6'
-                key={`process-${index}`}
-              >
-                <span className='rounded-full bg-background-2 p-5'>
-                  <Image
-                    src={step.darkIcon}
-                    alt={step.alt}
-                    className='hidden dark:block'
-                  />
-                  <Image
-                    src={step.lightIcon}
-                    alt={step.alt}
-                    className='dark:hidden'
-                  />
-                </span>
-                <figcaption className='smallBold md:paragraphBold'>
-                  {step.name}
-                </figcaption>
-              </figure>
-            ))}
-          </section>
-        </section>
-      </section>
+      <Process />
       <section className='bg-background-1'>
         <section className='padding-layout flex flex-col gap-6 p-16 xl:px-72'>
           <div className='flex flex-col gap-2'>
@@ -61,16 +32,7 @@ const CaseLayout = ({ data }: { data: Case }) => {
             </small>
             <section className='flex flex-col gap-6'>
               {challenges.map((challenge, index) => (
-                <section key={`challenge-${index}`} className='flex gap-3'>
-                  <Image
-                    src={ChallengeIcon}
-                    className='mt-1 h-6 w-6'
-                    alt='Target'
-                  />
-                  <small className='h-fit w-fit text-lg text-white-500 dark:text-white'>
-                    {challenge}
-                  </small>
-                </section>
+                <Challenge challenge={challenge} key={`challenge-${index}`} />
               ))}
             </section>
           </article>
@@ -80,16 +42,7 @@ const CaseLayout = ({ data }: { data: Case }) => {
             </small>
             <section className='flex flex-col gap-6'>
               {learnings.map((lesson, index) => (
-                <section key={`challenge-${index}`} className='flex gap-3'>
-                  <Image
-                    src={SuccessIcon}
-                    className='mt-1 h-6 w-6'
-                    alt='Target'
-                  />
-                  <small className='h-fit w-fit text-lg text-white-500 dark:text-white'>
-                    {lesson}
-                  </small>
-                </section>
+                <Lesson lesson={lesson} key={`lesson-${index}`} />
               ))}
             </section>
           </article>
