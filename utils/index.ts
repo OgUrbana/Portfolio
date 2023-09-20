@@ -19,6 +19,7 @@ import DevLightIcon from '@/public/cases/devLight.png';
 import DeployLightIcon from '@/public/cases/deployLight.png';
 import ChallengeIcon from '@/public/cases/challenge.png';
 import SuccessIcon from '@/public/cases/success.png';
+import TypeScriptIcon from '@/public/cases/tech/ts.svg';
 
 export function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -89,4 +90,5 @@ export {
   SuccessIcon,
   Jobit,
   Morrent,
+  TypeScriptIcon,
 };

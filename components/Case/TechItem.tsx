@@ -1,4 +1,4 @@
-import TypeScriptIcon from '@/public/icons/cases/tech/ts.svg';
+import { TypeScriptIcon } from '@/utils';
 
 const TechItem = () => {
   return (
