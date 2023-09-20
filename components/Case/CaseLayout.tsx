@@ -2,11 +2,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { ChallengeIcon, SuccessIcon, classNames } from '@/utils';
-import Technologies from './Technologies';
 import { Case } from '@/utils/type';
 import { workProcess } from '@/utils/cases';
 import CaseHero from './CaseHero';
 import CaseStats from './CaseStats';
+import CaseDesc from './CaseDesc';
 
 const CaseLayout = ({ data }: { data: Case }) => {
   const {
@@ -20,15 +20,7 @@ const CaseLayout = ({ data }: { data: Case }) => {
     <section>
       <CaseHero data={data} />
       <CaseStats data={data} />
-      <section className='bg-background-2'>
-        <section className='padding-layout flex flex-col gap-12 p-16 text-white-500 dark:text-white-800 xl:px-72'>
-          {description.map((desc, index) => (
-            <p key={`desc-${index}`} className='paragraph font-light'>
-              {desc}
-            </p>
-          ))}
-        </section>
-      </section>
+      <CaseDesc description={description} />
       <section className='bg-background-1'>
         <section className='padding-layout flex flex-col gap-6 px-16 pt-12 xl:px-72'>
           <hgroup className='flex flex-col gap-2'>
