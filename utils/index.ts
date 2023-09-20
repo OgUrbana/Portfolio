@@ -20,6 +20,16 @@ import DeployLightIcon from '@/public/cases/deployLight.png';
 import ChallengeIcon from '@/public/cases/challenge.png';
 import SuccessIcon from '@/public/cases/success.png';
 import TypeScriptIcon from '@/public/cases/tech/ts.svg';
+import NextIcon from '@/public/cases/tech/next.svg';
+import CSSIcon from '@/public/cases/tech/css.svg';
+import ReactIcon from '@/public/cases/tech/react.svg';
+import HTMLIcon from '@/public/cases/tech/html.svg';
+import MotionIcon from '@/public/cases/tech/motion.svg';
+import TailwindIcon from '@/public/cases/tech/tailwind.svg';
+import GithubTechIcon from '@/public/cases/tech/github.svg';
+import GitIcon from '@/public/cases/tech/git.svg';
+import NodeIcon from '@/public/cases/tech/node.svg';
+import SupabaseIcon from 'public/cases/tech/supabase.svg';
 
 export function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -91,4 +101,14 @@ export {
   Jobit,
   Morrent,
   TypeScriptIcon,
+  NextIcon,
+  CSSIcon,
+  ReactIcon,
+  HTMLIcon,
+  MotionIcon,
+  TailwindIcon,
+  GithubTechIcon,
+  GitIcon,
+  NodeIcon,
+  SupabaseIcon,
 };

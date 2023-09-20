@@ -1,18 +1,19 @@
 import Link from 'next/link';
 
-import { Tech } from './types';
-
-import NextIcon from '@/public/cases/tech/next.svg';
-import TypeScriptIcon from '@/public/cases/tech/ts.svg';
-import CSSIcon from '@/public/cases/tech/css.svg';
-import ReactIcon from '@/public/cases/tech/react.svg';
-import HTMLIcon from '@/public/cases/tech/html.svg';
-import MotionIcon from '@/public/cases/tech/motion.svg';
-import TailwindIcon from '@/public/cases/tech/tailwind.svg';
-import GithubIcon from '@/public/cases/tech/github.svg';
-import GitIcon from '@/public/cases/tech/git.svg';
-import NodeIcon from '@/public/cases/tech/node.svg';
-import SupabaseIcon from 'public/cases/tech/supabase.svg';
+import {
+  NextIcon,
+  TypeScriptIcon,
+  CSSIcon,
+  ReactIcon,
+  HTMLIcon,
+  MotionIcon,
+  TailwindIcon,
+  GithubTechIcon,
+  GitIcon,
+  NodeIcon,
+  SupabaseIcon,
+} from '@/utils';
+import { Tech } from '@/utils/type';
 
 const techDefs = [
   { name: 'next', icon: NextIcon, link: 'https://www.nextjs.org' },
@@ -26,7 +27,7 @@ const techDefs = [
   { name: 'html', icon: HTMLIcon, link: 'https://www.w3schools.com/html/' },
   { name: 'motion', icon: MotionIcon, link: 'https://www.framer.com/motion/' },
   { name: 'tailwind', icon: TailwindIcon, link: 'https://tailwindcss.com/' },
-  { name: 'github', icon: GithubIcon, link: 'https://github.com/OgUrbana' },
+  { name: 'github', icon: GithubTechIcon, link: 'https://github.com/OgUrbana' },
   { name: 'git', icon: GitIcon, link: 'https://git-scm.com/' },
   { name: 'node', icon: NodeIcon, link: 'https://nodejs.org/en' },
   { name: 'supabase', icon: SupabaseIcon, link: 'https://supabase.com/' },
