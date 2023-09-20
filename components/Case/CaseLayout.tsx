@@ -1,24 +1,21 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { classNames } from '@/utils';
+import {
+  ChallengeIcon,
+  GithubIcon,
+  GlobeIcon,
+  RightArrow,
+  SuccessIcon,
+  classNames,
+} from '@/utils';
 import Technologies from './Technologies';
 import { Case } from '@/utils/type';
 import { workProcess } from '@/utils/cases';
-import {
-  GlobeIcon,
-  RightArrow,
-  GithubIcon,
-  ChallengeIcon,
-  SuccessIcon,
-} from '@/utils/icons';
+import CaseHero from './CaseHero';
 
 const CaseLayout = ({ data }: { data: Case }) => {
-  console.log(data);
   const {
-    name,
-    preview,
-    hero: { title, tag, demoLink, source },
     info: { role, start, end },
     tech,
     description,
@@ -29,40 +26,7 @@ const CaseLayout = ({ data }: { data: Case }) => {
   } = data;
   return (
     <section>
-      <section className='my-16 flex flex-col items-center justify-center gap-6 text-center'>
-        <hgroup className='flex flex-col gap-4'>
-          <small className='text-base font-semibold uppercase tracking-widest text-primary md:text-lg'>
-            {title}
-          </small>
-          <h1 className='text-5xl md:text-6xl'>
-            <span className='text-secondary'>{name} </span> {tag}
-          </h1>
-        </hgroup>
-        <Image
-          src={preview}
-          priority
-          alt='Mobile & Desktop Preview'
-          className='p-3'
-        />
-        <section className='flex items-center justify-center gap-12 md:gap-32'>
-          <Link
-            href={demoLink}
-            className='default-animation group flex items-center gap-2 text-primary hover:text-primary/60'
-          >
-            <GlobeIcon className='default-animation fill-primary group-hover:fill-primary/60' />
-            <p>Demo Site</p>
-            <RightArrow className='default-animation stroke-primary group-hover:stroke-primary/60' />
-          </Link>
-          <Link
-            href={source}
-            className='default-animation group flex items-center gap-2 text-primary hover:text-primary/60'
-          >
-            <GithubIcon className='default-animation fill-primary group-hover:fill-primary/60' />
-            <p>Source Code</p>
-            <RightArrow className='default-animation stroke-primary group-hover:stroke-primary/60' />
-          </Link>
-        </section>
-      </section>
+      <CaseHero data={data} />
       <section className='bg-background-1'>
         <section className='padding-layout flex flex-col gap-12 p-16 xl:px-72'>
           <section className='flex flex-col justify-between gap-8 lg:flex-row lg:gap-0'>

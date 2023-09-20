@@ -1,19 +1,19 @@
-import { getProjects } from '.';
-import Jobit from '@/public/projects/jobit.png';
-import Morrent from '@/public/projects/morrent.png';
-
 import {
-  DefLightIcon,
   DefIcon,
-  DesignLightIcon,
-  DesignIcon,
-  PlanLightIcon,
-  PlanIcon,
-  DevLightIcon,
-  DevIcon,
-  DeployLightIcon,
+  DefLightIcon,
   DeployIcon,
-} from './icons';
+  DeployLightIcon,
+  DesignIcon,
+  DesignLightIcon,
+  DevIcon,
+  DevLightIcon,
+  PlanIcon,
+  PlanLightIcon,
+  getProjects,
+  Jobit,
+  Morrent,
+} from '.';
+
 import MorrentProblem from '@/public/cases/morrentproblem.png';
 
 import { Case } from './type';

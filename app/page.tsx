@@ -13,9 +13,7 @@ export default function Home() {
     <section className='flex flex-col gap-6'>
       <Hero />
       <Skills />
-      <section>
-        <Services />
-      </section>
+      <Services />
       <section className='flex flex-col gap-12 bg-background-1 py-16'>
         <Experience />
         <FeaturedProjects />
