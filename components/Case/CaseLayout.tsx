@@ -1,23 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import {
-  ChallengeIcon,
-  GithubIcon,
-  GlobeIcon,
-  RightArrow,
-  SuccessIcon,
-  classNames,
-} from '@/utils';
+import { ChallengeIcon, SuccessIcon, classNames } from '@/utils';
 import Technologies from './Technologies';
 import { Case } from '@/utils/type';
 import { workProcess } from '@/utils/cases';
 import CaseHero from './CaseHero';
+import CaseStats from './CaseStats';
 
 const CaseLayout = ({ data }: { data: Case }) => {
   const {
-    info: { role, start, end },
-    tech,
     description,
     problem: { statement, problemImage },
     challenges,
@@ -27,39 +19,7 @@ const CaseLayout = ({ data }: { data: Case }) => {
   return (
     <section>
       <CaseHero data={data} />
-      <section className='bg-background-1'>
-        <section className='padding-layout flex flex-col gap-12 p-16 xl:px-72'>
-          <section className='flex flex-col justify-between gap-8 lg:flex-row lg:gap-0'>
-            <hgroup>
-              <small className='text-lg font-semibold text-black-400'>
-                My Role
-              </small>
-              <h4 className='text-xl'>{role}</h4>
-            </hgroup>
-            <hgroup>
-              <small className='text-lg font-semibold text-black-400'>
-                Start Date
-              </small>
-              <h4 className='text-xl'>{start}</h4>
-            </hgroup>
-            <hgroup>
-              <small className='text-lg font-semibold text-black-400'>
-                End Date
-              </small>
-              <h4 className='text-xl'>{end}</h4>
-            </hgroup>
-          </section>
-          <section>
-            <hgroup className='flex flex-col gap-2'>
-              <small className='bold text-primary'>Technologies used</small>
-              <h3>Tech Stack</h3>
-              <section className='pt-2'>
-                <Technologies tech={tech} />
-              </section>
-            </hgroup>
-          </section>
-        </section>
-      </section>
+      <CaseStats data={data} />
       <section className='bg-background-2'>
         <section className='padding-layout flex flex-col gap-12 p-16 text-white-500 dark:text-white-800 xl:px-72'>
           {description.map((desc, index) => (
