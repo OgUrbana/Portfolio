@@ -1,99 +1,32 @@
 import Link from 'next/link';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 import { classNames } from '@/utils';
 import Technologies from './Technologies';
-import { Tech } from './types';
+import { Case } from '@/utils/type';
+import { workProcess } from '@/utils/cases';
+import {
+  GlobeIcon,
+  RightArrow,
+  GithubIcon,
+  ChallengeIcon,
+  SuccessIcon,
+} from '@/utils/icons';
 
-import GlobeIcon from '@/public/cases/globe.svg';
-import GithubIcon from '@/public/cases/github.svg';
-import RightArrow from '@/public/cases/arrowright.svg';
-import DefIcon from '@/public/cases/def.png';
-import DesignIcon from '@/public/cases/design.png';
-import PlanIcon from '@/public/cases/plan.png';
-import DevIcon from '@/public/cases/dev.png';
-import DeployIcon from '@/public/cases/deploy.png';
-import DefLightIcon from '@/public/cases/defLight.png';
-import DesignLightIcon from '@/public/cases/designLight.png';
-import PlanLightIcon from '@/public/cases/planLight.png';
-import DevLightIcon from '@/public/cases/devLight.png';
-import DeployLightIcon from '@/public/cases/deployLight.png';
-import ChallengeIcon from '@/public/cases/challenge.png';
-import SuccessIcon from '@/public/cases/success.png';
-
-const workProcess = [
-  {
-    lightIcon: DefLightIcon,
-    darkIcon: DefIcon,
-    name: 'Definition',
-    alt: 'Definition Icon',
-  },
-  {
-    lightIcon: DesignLightIcon,
-    darkIcon: DesignIcon,
-    name: 'Design',
-    alt: 'Design Icon',
-  },
-  {
-    lightIcon: PlanLightIcon,
-    darkIcon: PlanIcon,
-    name: 'Planning',
-    alt: 'Planning Icon',
-  },
-  {
-    lightIcon: DevLightIcon,
-    darkIcon: DevIcon,
-    name: 'Development',
-    alt: 'Development Icon',
-  },
-  {
-    lightIcon: DeployLightIcon,
-    darkIcon: DeployIcon,
-    name: 'Deployment',
-    alt: 'Deployment Icon',
-  },
-];
-
-const CaseLayout = ({
-  name,
-  preview,
-  hero: { title, tag, demoLink, source },
-  info: { role, start, end },
-  tech,
-  description,
-  problem: { statement, problemImage },
-  challenges,
-  learnings,
-  projects,
-}: {
-  name: string;
-  preview: StaticImageData;
-  hero: {
-    title: string;
-    tag: string;
-    demoLink: string;
-    source: string;
-  };
-  info: {
-    role: string;
-    start: string;
-    end: string;
-  };
-  tech: Tech[];
-  description: string[];
-  problem: {
-    statement: string;
-    problemImage: StaticImageData;
-  };
-  challenges: string[];
-  learnings: string[];
-  projects: {
-    name: string;
-    link: string;
-    image: StaticImageData;
-    desc: string;
-  }[];
-}) => {
+const CaseLayout = ({ data }: { data: Case }) => {
+  console.log(data);
+  const {
+    name,
+    preview,
+    hero: { title, tag, demoLink, source },
+    info: { role, start, end },
+    tech,
+    description,
+    problem: { statement, problemImage },
+    challenges,
+    learnings,
+    projects,
+  } = data;
   return (
     <section>
       <section className='my-16 flex flex-col items-center justify-center gap-6 text-center'>
@@ -223,10 +156,10 @@ const CaseLayout = ({
       </section>
       <section className='bg-background-1'>
         <section className='padding-layout flex flex-col gap-6 p-16 xl:px-72'>
-          <hgroup className='flex flex-col gap-2'>
+          <div className='flex flex-col gap-2'>
             <small className='bold text-primary'>Discovery</small>
             <h3>Challenges & Learnings</h3>
-          </hgroup>
+          </div>
           <article className='flex flex-col gap-6 rounded-xl bg-background-2 px-6 py-10 lg:px-12'>
             <small className='paragraph text-lg !font-semibold uppercase leading-7 text-[#E15A46]'>
               Challenges
