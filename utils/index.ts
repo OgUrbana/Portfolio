@@ -30,10 +30,34 @@ import GithubTechIcon from '@/public/cases/tech/github.svg';
 import GitIcon from '@/public/cases/tech/git.svg';
 import NodeIcon from '@/public/cases/tech/node.svg';
 import SupabaseIcon from 'public/cases/tech/supabase.svg';
+import AllMight from '@/public/people/allmight.jpg';
+import PlaceholderUser from '@/public/people/placeholder-user.jpg';
+import ArrowLeft from '@/public/icons/arrow-left.svg';
+import ArrowRight from '@/public/icons/arrow-right.svg';
+import FullStar from '@/public/icons/fullstar.svg';
 
 export function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
+
+export const reviews = [
+  {
+    name: 'All Might',
+    image: AllMight,
+    title: 'Teacher at U.A & Number 1 Hero',
+    rating: 5,
+    review:
+      'It was a pleasure working with Matthew as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in many modern languages and framerworks. He is very hard working and always goes beyond PLUS ULTRA!',
+  },
+  {
+    name: '- Mom',
+    image: PlaceholderUser,
+    rating: 5,
+    title: 'My Wonderful Mom',
+    review:
+      'Very handsome, very nice and very respectable. Always babysits when we asks him. Smartest in the world! He always helps around the house and always fixes everything that breaks. He is an IT genius!',
+  },
+];
 
 export const cases = [
   {
@@ -111,6 +135,9 @@ export {
   GitIcon,
   NodeIcon,
   SupabaseIcon,
+  ArrowLeft,
+  ArrowRight,
+  FullStar,
 };
 
 export const techDefs = [

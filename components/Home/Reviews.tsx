@@ -3,30 +3,8 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-import AllMight from '@/public/people/allmight.jpg';
-import PlaceholderUser from '@/public/people/placeholder-user.jpg';
-import FullStar from '@/public/icons/fullstar.svg';
-import ArrowLeft from '@/public/icons/arrow-left.svg';
-import ArrowRight from '@/public/icons/arrow-right.svg';
-
-const reviews = [
-  {
-    name: 'All Might',
-    image: AllMight,
-    title: 'Teacher at U.A & Number 1 Hero',
-    rating: 5,
-    review:
-      'It was a pleasure working with Matthew as a Software Developer and can confidently say that he is a valuable asset to any team. He is highly skilled in many modern languages and framerworks. He is very hard working and always goes beyond PLUS ULTRA!',
-  },
-  {
-    name: '- Mom',
-    image: PlaceholderUser,
-    rating: 5,
-    title: 'My Wonderful Mom',
-    review:
-      'Very handsome, very nice and very respectable. Always babysits when we asks him. Smartest in the world! He always helps around the house and always fixes everything that breaks. He is an IT genius!',
-  },
-];
+import { FullStar, reviews } from '@/utils';
+import ReviewButton from './ReviewButton';
 
 const Reviews = () => {
   const [reviewIndex, setReviewIndex] = useState(
@@ -56,14 +34,7 @@ const Reviews = () => {
 
   return (
     <section className='flex items-center justify-around gap-8'>
-      <button
-        type='button'
-        className='hidden rounded-full bg-background-1 p-3 transition duration-300 ease-in-out hover:bg-primary/60 md:block'
-        aria-label='Previous Review'
-        onClick={previousReview}
-      >
-        <ArrowLeft className='h-6 w-6 stroke-black-200 stroke-2 dark:stroke-white' />
-      </button>
+      <ReviewButton onClick={previousReview} />
       <article className='flex flex-col items-center gap-6 py-12 md:flex-row'>
         <Image
           src={review.image}
@@ -71,20 +42,8 @@ const Reviews = () => {
           className='h-56 w-56 rounded-xl object-cover'
         />
         <section className='flex gap-4'>
-          <button
-            className='h-fit rounded-full bg-background-1 p-3 transition duration-300 ease-in-out hover:bg-primary/60 md:hidden'
-            onClick={previousReview}
-            aria-label='Previous Review'
-          >
-            <ArrowLeft className='h-6 w-6 stroke-black-200 stroke-2 dark:stroke-white' />
-          </button>
-          <button
-            className='h-fit rounded-full bg-background-1 p-3 transition duration-300 ease-in-out hover:bg-primary/60 md:hidden'
-            aria-label='Next Review'
-            onClick={nextReview}
-          >
-            <ArrowRight className='h-6 w-6 stroke-black-200 stroke-2 dark:stroke-white' />
-          </button>
+          <ReviewButton mobile onClick={previousReview} />
+          <ReviewButton mobile next onClick={nextReview} />
         </section>
         <section className='flex flex-col justify-center gap-4'>
           <section className='flex h-5 w-24 gap-1'>
@@ -108,14 +67,7 @@ const Reviews = () => {
           </section>
         </section>
       </article>
-      <button
-        type='button'
-        className='hidden rounded-full bg-background-1 p-3 transition duration-300 ease-in-out hover:bg-primary/60 md:block'
-        onClick={nextReview}
-        aria-label='Next Review'
-      >
-        <ArrowRight className='h-6 w-6 stroke-black-200 stroke-2 dark:stroke-white' />
-      </button>
+      <ReviewButton next onClick={nextReview} />
     </section>
   );
 };

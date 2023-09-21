@@ -20,7 +20,7 @@ const CasePreviews = ({
     <article className='flex flex-col rounded-xl bg-background-1'>
       <Image priority src={image} alt={name} className='rounded-t-xl' />
       <section className='flex flex-col gap-2 p-6'>
-        <small className='base-bold text-primary'>JobIt</small>
+        <small className='base-bold text-primary'>{name}</small>
         <p className='line-clamp-3 text-lg font-light text-white-500 dark:text-white'>
           {desc}
         </p>
