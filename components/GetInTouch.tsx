@@ -12,13 +12,13 @@ const GetInTouch = () => {
           <Image
             src={ContactBanner}
             priority
-            alt='contact background'
+            alt='Large Placeholder Contact background'
             className='hidden sm:block'
           />
           <Image
             src={ContactBannerSmall}
             priority
-            alt='contact background'
+            alt='Small Placeholder Contact Background'
             className='sm:hidden'
           />
         </Link>

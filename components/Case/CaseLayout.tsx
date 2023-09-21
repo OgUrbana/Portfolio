@@ -11,6 +11,7 @@ import {
   Process,
   CaseDiscovery,
 } from '.';
+import CasePreviews from './CasePreviews';
 
 const CaseLayout = ({ data }: { data: Case }) => {
   const { description, problem, challenges, learnings, projects } = data;
@@ -31,35 +32,10 @@ const CaseLayout = ({ data }: { data: Case }) => {
             </hgroup>
             <section className='flex flex-col gap-4 md:flex-row'>
               {projects.map((project, index) => (
-                <article
-                  key={`project-${index}`}
-                  className='flex flex-col rounded-xl bg-background-1'
-                >
-                  <Image
-                    priority
-                    src={project.image}
-                    alt={project.name}
-                    className='rounded-t-xl'
-                  />
-                  <section className='flex flex-col gap-2 p-6'>
-                    <small className='base-bold text-primary'>JobIt</small>
-                    <p className='line-clamp-3 text-lg font-light text-white-500 dark:text-white'>
-                      {project.desc}
-                    </p>
-                    <Link
-                      href={project.link}
-                      className={classNames(
-                        'rounded-full bg-primary px-3 py-2 text-center text-white default-animation hover:bg-primary/70 hover:scale-105',
-                        projects.length > 1
-                          ? 'w-full'
-                          : 'w-full lg:w-fit lg:place-self-end',
-                      )}
-                      aria-label={`Case-${project.name}`}
-                    >
-                      See Case Study
-                    </Link>
-                  </section>
-                </article>
+                <CasePreviews
+                  project={{ ...project, length: projects.length }}
+                  key={`case-preview-${index}`}
+                />
               ))}
             </section>
           </section>
