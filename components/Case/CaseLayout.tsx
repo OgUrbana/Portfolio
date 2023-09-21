@@ -1,7 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
-
-import { classNames } from '@/utils';
 import { Case } from '@/utils/type';
 import {
   CaseHero,
