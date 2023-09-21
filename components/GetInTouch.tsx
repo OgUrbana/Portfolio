@@ -7,7 +7,7 @@ import ContactBannerSmall from '@/public/contactbannersm.png';
 const GetInTouch = () => {
   return (
     <section className='bg-background-1 pt-12'>
-      <section className='padding-layout flex justify-center'>
+      <div className='padding-layout flex justify-center'>
         <Link href='/contact'>
           <Image
             src={ContactBanner}
@@ -22,7 +22,7 @@ const GetInTouch = () => {
             className='sm:hidden'
           />
         </Link>
-      </section>
+      </div>
     </section>
   );
 };
