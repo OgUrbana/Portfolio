@@ -12,7 +12,7 @@ const DiscoveryArticle = ({
       <small className='paragraph text-lg !font-semibold uppercase leading-7 text-[#E15A46]'>
         {challenge ? 'Challenges' : 'Learnings'}
       </small>
-      <section className='flex flex-col gap-6'>
+      <div className='flex flex-col gap-6'>
         {discoveries.map((discovery, index) =>
           challenge ? (
             <Challenge challenge={discovery} key={`challenge-${index}`} />
@@ -20,7 +20,7 @@ const DiscoveryArticle = ({
             <Lesson lesson={discovery} key={`lesson-${index}`} />
           ),
         )}
-      </section>
+      </div>
     </article>
   );
 };

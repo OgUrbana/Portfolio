@@ -34,7 +34,7 @@ const Services = () => {
       <h3 className='text-center'>
         What <span className='yellow-gradient'>Services</span> do I provide?
       </h3>
-      <section className='grid gap-4 sm:grid-cols-2 sm:gap-4 lg:gap-6 xl:grid-cols-4 xl:gap-12'>
+      <div className='grid gap-4 sm:grid-cols-2 sm:gap-4 lg:gap-6 xl:grid-cols-4 xl:gap-12'>
         {services.map((service, index) => (
           <article
             key={index}
@@ -43,17 +43,17 @@ const Services = () => {
             <figure className='drop-shadow-primary w-fit rounded-xl bg-primary p-3 group-hover:bg-white'>
               <service.icon className='h-6 w-6 fill-inherit' />
             </figure>
-            <section>
+            <div>
               <h4 className='base-bold !text-lg group-hover:text-white'>
                 {service.title}
               </h4>
               <small className='!text-xs text-white-500 group-hover:text-white'>
                 {service.desc}
               </small>
-            </section>
+            </div>
           </article>
         ))}
-      </section>
+      </div>
     </section>
   );
 };

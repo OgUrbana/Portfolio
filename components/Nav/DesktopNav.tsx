@@ -16,7 +16,7 @@ const DesktopNav = () => {
       <Link href='/' aria-label='Home'>
         Matthew Gajo
       </Link>
-      <section className='flex items-center gap-8'>
+      <div className='flex items-center gap-8'>
         <ul className='flex gap-4' id='navList'>
           <li>
             <Link
@@ -59,7 +59,7 @@ const DesktopNav = () => {
         </ul>
         <Divider />
         <ToggleTheme />
-      </section>
+      </div>
     </section>
   );
 };

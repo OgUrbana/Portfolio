@@ -41,31 +41,31 @@ const Reviews = () => {
           alt='Reviewer'
           className='h-56 w-56 rounded-xl object-cover'
         />
-        <section className='flex gap-4'>
+        <div className='flex gap-4'>
           <ReviewButton mobile onClick={previousReview} />
           <ReviewButton mobile next onClick={nextReview} />
-        </section>
-        <section className='flex flex-col justify-center gap-4'>
-          <section className='flex h-5 w-24 gap-1'>
+        </div>
+        <div className='flex flex-col justify-center gap-4'>
+          <div className='flex h-5 w-24 gap-1'>
             {[...Array(review.rating)].map((item, index) => (
               <FullStar
                 key={`star-${index}`}
                 className='h-5 w-5 fill-secondary'
               />
             ))}
-          </section>
+          </div>
           <p className='text-lg text-white-500 dark:text-white md:text-base lg:text-lg'>
             {review.review}
           </p>
-          <section className='flex flex-col'>
+          <div className='flex flex-col'>
             <small className='text-lg font-bold text-black dark:text-white'>
               {review.name}
             </small>
             <small className='text-lg text-white-500 dark:text-white'>
               {review.title}
             </small>
-          </section>
-        </section>
+          </div>
+        </div>
       </article>
       <ReviewButton next onClick={nextReview} />
     </section>

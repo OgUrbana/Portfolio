@@ -25,13 +25,13 @@ const ProgressBar = ({
 
   return (
     <article className='mb-2 flex w-96 flex-col gap-2 md:w-80 lg:mb-0 lg:w-96'>
-      <section className='flex items-center justify-between'>
+      <div className='flex items-center justify-between'>
         <h4 className='text-xl'>{content}</h4>
         <small>
           {progress}
           <span className='text-xs'>%</span>
         </small>
-      </section>
+      </div>
       <Progress.Root
         aria-label={`${content} current progress ${currentProgress}%`}
         className='relative h-3 w-full overflow-hidden rounded-full bg-background-2'

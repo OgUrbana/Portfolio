@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className='bg-background-1 pb-6 pt-12'>
       <section className='padding-layout'>
-        <section className='flex flex-col items-center justify-center gap-2 pt-8 dark:border-t dark:border-t-black-300 md:flex-row md:justify-between'>
+        <div className='flex flex-col items-center justify-center gap-2 pt-8 dark:border-t dark:border-t-black-300 md:flex-row md:justify-between'>
           <small>© 2023 Matthew Gajo. All rights reserved.</small>
           <figure className='flex gap-2'>
             <Link
@@ -41,7 +41,7 @@ const Footer = () => {
               <GithubIcon className='social' />
             </Link>
           </figure>
-        </section>
+        </div>
       </section>
     </footer>
   );
