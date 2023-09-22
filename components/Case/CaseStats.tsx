@@ -7,37 +7,37 @@ const CaseStats = ({ data }: { data: Case }) => {
 
   return (
     <section className='bg-background-1'>
-      <section className='padding-layout flex flex-col gap-12 p-16 xl:px-72'>
-        <section className='flex flex-col justify-between gap-8 lg:flex-row lg:gap-0'>
-          <hgroup>
+      <div className='padding-layout flex flex-col gap-12 p-16 xl:px-72'>
+        <div className='flex flex-col justify-between gap-8 lg:flex-row lg:gap-0'>
+          <div>
             <small className='text-lg font-semibold text-black-400'>
               My Role
             </small>
             <h4 className='text-xl'>{role}</h4>
-          </hgroup>
-          <hgroup>
+          </div>
+          <div>
             <small className='text-lg font-semibold text-black-400'>
               Start Date
             </small>
             <h4 className='text-xl'>{start}</h4>
-          </hgroup>
-          <hgroup>
+          </div>
+          <div>
             <small className='text-lg font-semibold text-black-400'>
               End Date
             </small>
             <h4 className='text-xl'>{end}</h4>
-          </hgroup>
-        </section>
-        <section>
-          <hgroup className='flex flex-col gap-2'>
+          </div>
+        </div>
+        <div>
+          <div className='flex flex-col gap-2'>
             <small className='bold text-primary'>Technologies used</small>
             <h3>Tech Stack</h3>
-            <section className='pt-2'>
+            <div className='pt-2'>
               <Technologies tech={tech} />
-            </section>
-          </hgroup>
-        </section>
-      </section>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

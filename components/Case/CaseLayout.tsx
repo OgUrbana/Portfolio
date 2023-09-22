@@ -20,22 +20,22 @@ const CaseLayout = ({ data }: { data: Case }) => {
       <Process />
       <section className='bg-background-1'>
         <CaseDiscovery challenges={challenges} learnings={learnings} />
-        <section className='bg-background-2'>
-          <section className='padding-layout flex flex-col gap-6 p-16 xl:px-72'>
-            <hgroup className='flex flex-col gap-2'>
+        <div className='bg-background-2'>
+          <div className='padding-layout flex flex-col gap-6 p-16 xl:px-72'>
+            <div className='flex flex-col gap-2'>
               <small className='bold text-primary'>Projects</small>
               <h3>Other Case Studies</h3>
-            </hgroup>
-            <section className='flex flex-col gap-4 md:flex-row'>
+            </div>
+            <div className='flex flex-col gap-4 md:flex-row'>
               {projects.map((project, index) => (
                 <CasePreviews
                   project={{ ...project, length: projects.length }}
                   key={`case-preview-${index}`}
                 />
               ))}
-            </section>
-          </section>
-        </section>
+            </div>
+          </div>
+        </div>
       </section>
     </section>
   );
