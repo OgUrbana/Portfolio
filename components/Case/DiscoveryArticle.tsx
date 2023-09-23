@@ -9,7 +9,11 @@ const DiscoveryArticle = ({
 }) => {
   return (
     <article className='flex flex-col gap-6 rounded-xl bg-background-2 px-6 py-10 lg:px-12'>
-      <small className='paragraph text-lg !font-semibold uppercase leading-7 text-[#E15A46]'>
+      <small
+        className={`paragraph text-lg !font-semibold uppercase leading-7 ${
+          challenge ? 'text-challenge' : 'text-success'
+        }`}
+      >
         {challenge ? 'Challenges' : 'Learnings'}
       </small>
       <div className='flex flex-col gap-6'>

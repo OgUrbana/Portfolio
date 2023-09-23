@@ -31,6 +31,8 @@ const config: Config = {
         'black-300': '#192333',
         'black-400': '#778295',
         jobit: '#0BAB7C',
+        challenge: '#E15A46',
+        success: '#02BC7D',
       },
       fontSize: {
         sm: ['0.875rem', '155%'],
