@@ -15,7 +15,7 @@ const Hero = (props: Props) => {
           Professional <span className='yellow-gradient'>Web Developer </span>
           based in USA
         </h1>
-        <p className='text-[12px] text-white-500 xl:text-[1.125rem]'>
+        <p className='text-[12px] text-white-500 sm:text-[1.125rem]'>
           Transforming the web one line of code at a time: Crafting cutting-edge
           digital experiences with precision, passion, and a profound commitment
           to excellence
