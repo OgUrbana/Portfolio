@@ -11,7 +11,7 @@ const SkillsTab = () => {
   return (
     <Tab.Group>
       <Tab.List className='flex justify-center'>
-        <section className='mb-4 flex rounded-lg bg-background-2 p-1 shadow-md'>
+        <div className='mb-4 flex rounded-lg bg-background-2 p-1 shadow-md'>
           {tabs.map((tab) => (
             <Tab
               key={tab}
@@ -25,42 +25,40 @@ const SkillsTab = () => {
               {tab}
             </Tab>
           ))}
-        </section>
+        </div>
       </Tab.List>
       <Tab.Panels className=''>
         <Tab.Panel className='flex flex-col gap-3 md:flex-row md:justify-between md:gap-10'>
-          <section className='flex w-full flex-col items-center gap-3'>
-            <ProgressBar content='JavaScript' currentProgress={84} />
+          <div className='flex w-full flex-col items-center gap-3'>
+            <ProgressBar content='JavaScript' currentProgress={93} />
             <ProgressBar content='CSS' currentProgress={92} />
-            <ProgressBar content='Python' currentProgress={64} />
-          </section>
-          <section className='flex w-full flex-col items-center gap-3'>
-            <ProgressBar content='Typescript' currentProgress={72} />
+          </div>
+          <div className='flex w-full flex-col items-center gap-3'>
+            <ProgressBar content='Typescript' currentProgress={91} />
             <ProgressBar content='HTML' currentProgress={94} />
-            <ProgressBar content='C++' currentProgress={40} />
-          </section>
+          </div>
         </Tab.Panel>
         <Tab.Panel className='flex flex-col gap-3 md:flex-row md:justify-between md:gap-10'>
-          <section className='flex w-full flex-col items-center gap-3'>
-            <ProgressBar content='React' currentProgress={76} />
-            <ProgressBar content='Headless' currentProgress={80} />
-            <ProgressBar content='Material UI' currentProgress={64} />
-          </section>
-          <section className='flex w-full flex-col items-center gap-3'>
-            <ProgressBar content='NextJS' currentProgress={84} />
+          <div className='flex w-full flex-col items-center gap-3'>
+            <ProgressBar content='React' currentProgress={93} />
+            <ProgressBar content='Headless' currentProgress={91} />
+            <ProgressBar content='Framer Motion' currentProgress={90} />
+          </div>
+          <div className='flex w-full flex-col items-center gap-3'>
+            <ProgressBar content='NextJS' currentProgress={94} />
             <ProgressBar content='Tailwind' currentProgress={90} />
-            <ProgressBar content='Radix UI' currentProgress={81} />
-          </section>
+            <ProgressBar content='Radix UI' currentProgress={90} />
+          </div>
         </Tab.Panel>
         <Tab.Panel className='flex flex-col gap-3 md:flex-row md:justify-between md:gap-10'>
-          <section className='flex w-full flex-col items-center gap-3'>
-            <ProgressBar content='Supabase' currentProgress={74} />
-            <ProgressBar content='Git' currentProgress={80} />
-          </section>
-          <section className='flex w-full flex-col items-center gap-3'>
-            <ProgressBar content='MongoDB' currentProgress={78} />
-            <ProgressBar content='Github' currentProgress={89} />
-          </section>
+          <div className='flex w-full flex-col items-center gap-3'>
+            <ProgressBar content='Supabase' currentProgress={90} />
+            <ProgressBar content='Git' currentProgress={90} />
+          </div>
+          <div className='flex w-full flex-col items-center gap-3'>
+            <ProgressBar content='MongoDB' currentProgress={91} />
+            <ProgressBar content='Github' currentProgress={92} />
+          </div>
         </Tab.Panel>
       </Tab.Panels>
     </Tab.Group>

@@ -13,11 +13,14 @@ const DesktopNav = () => {
 
   return (
     <section className='padding-layout hidden items-center justify-between py-9 md:flex'>
-      <div>Logo</div>
-      <section className='flex items-center gap-8'>
+      <Link href='/' aria-label='Home'>
+        Matthew Gajo
+      </Link>
+      <div className='flex items-center gap-8'>
         <ul className='flex gap-4' id='navList'>
           <li>
             <Link
+              prefetch
               href='/'
               className={`${pathname === '/' ? 'navActive' : 'navLink'}`}
             >
@@ -26,6 +29,7 @@ const DesktopNav = () => {
           </li>
           <li>
             <Link
+              prefetch
               href='/case'
               className={`${pathname === '/case' ? 'navActive' : 'navLink'}`}
             >
@@ -34,6 +38,7 @@ const DesktopNav = () => {
           </li>
           <li>
             <Link
+              prefetch
               href='/contact'
               className={`${pathname === '/contact' ? 'navActive' : 'navLink'}`}
             >
@@ -42,6 +47,7 @@ const DesktopNav = () => {
           </li>
           <li>
             <Link
+              prefetch
               href='/resume.pdf'
               className={`${pathname === '/resume' ? 'navActive' : 'navLink'}`}
               locale={false}
@@ -53,7 +59,7 @@ const DesktopNav = () => {
         </ul>
         <Divider />
         <ToggleTheme />
-      </section>
+      </div>
     </section>
   );
 };

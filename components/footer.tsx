@@ -9,32 +9,39 @@ const Footer = () => {
   return (
     <footer className='bg-background-1 pb-6 pt-12'>
       <section className='padding-layout'>
-        <section className='flex flex-col items-center justify-center gap-2 pt-8 dark:border-t dark:border-t-black-300 md:flex-row md:justify-between'>
+        <div className='flex flex-col items-center justify-center gap-2 pt-8 dark:border-t dark:border-t-black-300 md:flex-row md:justify-between'>
           <small>© 2023 Matthew Gajo. All rights reserved.</small>
           <figure className='flex gap-2'>
-            <Link href='' className='default-animation'>
+            <Link
+              href='https://instagram.com/'
+              className='default-social'
+              aria-label='instagram'
+            >
               <InstagramIcon className='social' />
             </Link>
             <Link
-              href=''
-              className='default-animation rounded-full bg-black-400 hover:bg-primary dark:bg-white dark:hover:bg-primary'
+              aria-label='X'
+              href='https://x.com/'
+              className='default-social rounded-full bg-black-400 hover:bg-primary dark:bg-white dark:hover:bg-primary'
             >
               <XIcon className='fill-background-1' />
             </Link>
             <Link
+              aria-label='LinkedIn'
               href='https://www.linkedin.com/in/matthewgajo/'
-              className='default-animation'
+              className='default-social'
             >
               <LinkedInIcon className='social' />
             </Link>
             <Link
+              aria-label='GitHub'
               href='https://github.com/OgUrbana'
-              className='default-animation'
+              className='default-social'
             >
               <GithubIcon className='social' />
             </Link>
           </figure>
-        </section>
+        </div>
       </section>
     </footer>
   );

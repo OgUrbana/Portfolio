@@ -20,8 +20,8 @@ const MobileNav = () => {
 
   return (
     <section className='mx-6 flex items-center justify-between py-6 md:hidden'>
-      <p>Logo</p>
-      <section className='flex items-center gap-3'>
+      <p>Matthew Gajo</p>
+      <div className='flex items-center gap-3'>
         <ToggleTheme />
         <motion.div
           variants={sidebar}
@@ -33,7 +33,7 @@ const MobileNav = () => {
         <figure className='z-50 cursor-pointer' onClick={() => toggleOpen()}>
           <Hamburger isOpen={isOpen} />
         </figure>
-      </section>
+      </div>
     </section>
   );
 };
