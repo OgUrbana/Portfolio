@@ -13,19 +13,19 @@ const CaseStats = ({ data }: { data: Case }) => {
             <small className='text-lg font-semibold text-black-400'>
               My Role
             </small>
-            <h4 className='text-xl'>{role}</h4>
+            <h4 className='text-2xl'>{role}</h4>
           </div>
           <div>
             <small className='text-lg font-semibold text-black-400'>
               Start Date
             </small>
-            <h4 className='text-xl'>{start}</h4>
+            <h4 className='text-2xl'>{start}</h4>
           </div>
           <div>
             <small className='text-lg font-semibold text-black-400'>
               End Date
             </small>
-            <h4 className='text-xl'>{end}</h4>
+            <h4 className='text-2xl'>{end}</h4>
           </div>
         </div>
         <div>
