@@ -35,6 +35,10 @@ import PlaceholderUser from '@/public/people/placeholder-user.jpg';
 import ArrowLeft from '@/public/icons/arrow-left.svg';
 import ArrowRight from '@/public/icons/arrow-right.svg';
 import FullStar from '@/public/icons/fullstar.svg';
+import AnalyticsIcon from '@/public/icons/services/analytics.svg';
+import MonitorIcon from '@/public/icons/services/monitor.svg';
+import ServerIcon from '@/public/icons/services/server.svg';
+import OptimizeIcon from '@/public/icons/services/optimize.svg';
 
 export function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -138,6 +142,10 @@ export {
   ArrowLeft,
   ArrowRight,
   FullStar,
+  AnalyticsIcon,
+  MonitorIcon,
+  ServerIcon,
+  OptimizeIcon,
 };
 
 export const techDefs = [
@@ -156,4 +164,27 @@ export const techDefs = [
   { name: 'git', icon: GitIcon, link: 'https://git-scm.com/' },
   { name: 'node', icon: NodeIcon, link: 'https://nodejs.org/en' },
   { name: 'supabase', icon: SupabaseIcon, link: 'https://supabase.com/' },
+];
+
+export const services = [
+  {
+    title: 'Analytics & SEO',
+    desc: 'Implement tracking & analytics tools to monitor website performance & improve SEO.',
+    icon: AnalyticsIcon,
+  },
+  {
+    title: 'Front-End Dev',
+    desc: 'Front-end dev includes creating the user interface and interactive elements of websites and apps.',
+    icon: MonitorIcon,
+  },
+  {
+    title: 'Back-End Dev',
+    desc: 'Back-end dev includes managing API, integrate elements, and managing data.',
+    icon: ServerIcon,
+  },
+  {
+    title: 'Web Optimization',
+    desc: 'Web optimization focuses on improving website performance for a smoother user experience',
+    icon: OptimizeIcon,
+  },
 ];
