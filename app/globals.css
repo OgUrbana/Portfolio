@@ -76,13 +76,13 @@
 
   /* Typography */
   .base {
-    @apply font-normal;
-    font-size: 1.5rem;
+    @apply font-light;
+    font-size: 1.25rem;
     line-height: 130%;
   }
   .base-bold {
     @apply font-semibold;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 130%;
   }
   .padding-layout {

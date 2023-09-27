@@ -39,6 +39,10 @@ import AnalyticsIcon from '@/public/icons/services/analytics.svg';
 import MonitorIcon from '@/public/icons/services/monitor.svg';
 import ServerIcon from '@/public/icons/services/server.svg';
 import OptimizeIcon from '@/public/icons/services/optimize.svg';
+import InstagramIcon from '@/public/icons/social/instagram.svg';
+import XIcon from '@/public/icons/social/x.svg';
+import LinkedInIcon from '@/public/icons/social/linkedin.svg';
+import GithubSocialIcon from '@/public/icons/social/github.svg';
 
 export function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -146,6 +150,10 @@ export {
   MonitorIcon,
   ServerIcon,
   OptimizeIcon,
+  InstagramIcon,
+  XIcon,
+  LinkedInIcon,
+  GithubSocialIcon,
 };
 
 export const techDefs = [
