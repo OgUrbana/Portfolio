@@ -1,9 +1,9 @@
 import { GithubSocialIcon, InstagramIcon, LinkedInIcon, XIcon } from '@/utils';
 import Link from 'next/link';
 
-const SocialLinks = () => {
+const SocialLinks = ({ className }: { className?: string }) => {
   return (
-    <figure className='flex gap-2'>
+    <figure className={className ?? 'flex gap-2'}>
       <Link
         href='https://instagram.com/'
         className='default-social'
