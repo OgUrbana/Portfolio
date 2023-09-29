@@ -1,20 +1,16 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
+import NotificationEmail from '@/components/Contact/NotificationEmail';
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
-    // const data = await resend.emails.send({
-    //   from: 'Acme <onboarding@resend.dev>',
-    //   to: ['delivered@resend.dev'],
-    //   subject: 'Hello world',
-    //   react: EmailTemplate({ firstName: 'John' }),
-    // });
     const { data, token } = await request.json();
     const { name, email, project, contact } = data;
-    // console.log(name, email, project, contact, token);
 
+    // Verifying user with RECaptcha v3
     const captchaData = await fetch(
       `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
       {
@@ -22,11 +18,20 @@ export async function POST(request: Request) {
       },
     );
 
+    // Captcha Response
     const response = await captchaData.json();
 
-    console.log(response);
+    // True = Real User, False = Bot / Error
+    if (response.success) {
+      await resend.emails.send({
+        from: 'noreply@gajo.dev',
+        to: [email as string],
+        subject: `${name} - Wants to get in touch.`,
+        react: NotificationEmail({ name, email, contact, project }),
+      });
+    }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ status: 200, success: true });
   } catch (error) {
     return NextResponse.json({ error });
   }

@@ -12,14 +12,16 @@ const ContactInfo = () => {
         <p className='base'>Phone Number</p>
         <div className='base flex items-center gap-2 text-black-400 dark:text-white'>
           <PhoneIcon className='h-4 w-4' />
-          <span className='font-semibold'>(240)-220-4816</span>
+          <span className='select-all font-semibold'>(240)-220-4816</span>
         </div>
       </div>
       <div className='flex flex-col gap-6'>
         <p className='base'>Email Address</p>
         <div className='base flex items-center gap-2 text-black-400 dark:text-white'>
           <EmailIcon className='h-4 w-4 shrink-0' />
-          <span className='font-semibold'>matthew.gajo@gmail.com</span>
+          <span className='select-all font-semibold'>
+            matthew.gajo@gmail.com
+          </span>
         </div>
       </div>
     </div>

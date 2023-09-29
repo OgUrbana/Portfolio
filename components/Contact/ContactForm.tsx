@@ -1,38 +1,13 @@
 'use client';
 
-import { FormEvent, useCallback } from 'react';
+import { FormEvent, useCallback, useState } from 'react';
 import { useReCaptcha } from 'next-recaptcha-v3';
 import * as Form from '@radix-ui/react-form';
 
-const contactQuestions = [
-  {
-    question: "What's your name?",
-    type: 'text',
-    name: 'name',
-    invalid: 'Please enter your Full Name',
-  },
-  {
-    question: "What's your email?",
-    type: 'email',
-    name: 'email',
-    invalid: 'Please enter your Email',
-    mismatch: 'Please enter a valid Email.',
-  },
-  {
-    question: 'Write something about your project goals and timeframe',
-    type: 'text',
-    name: 'project',
-    invalid: 'Please enter information about your project.',
-  },
-  {
-    question: 'How to reach out to you back?',
-    exempli: ' eg. phone number or email',
-    type: 'text',
-    name: 'contact',
-    invalid: 'Let me know how I can reach you.',
-  },
-];
+import { contactQuestions } from '@/utils';
+
 const ContactForm = () => {
+  const [disabled, setDisabled] = useState(false);
   const { executeRecaptcha } = useReCaptcha();
 
   const handleSubmit = useCallback(
@@ -41,10 +16,14 @@ const ContactForm = () => {
       const data = Object.fromEntries(new FormData(event.currentTarget));
       const token = await executeRecaptcha('contact_form');
 
-      fetch(`/api/contact`, {
+      const response = await fetch(`/api/contact`, {
         method: 'POST',
         body: JSON.stringify({ data, token }),
       });
+
+      const emailResponse = await response.json();
+
+      if (emailResponse.success) setDisabled(true);
     },
     [executeRecaptcha],
   );
@@ -64,15 +43,17 @@ const ContactForm = () => {
           <Form.Control asChild>
             {question.name !== 'project' ? (
               <input
-                className='default-animation rounded-2xl border border-lightBlue bg-background-2 px-3 py-4 outline-none dark:border-black-600'
+                className='default-animation rounded-2xl border border-lightBlue bg-background-2 px-3 py-4 outline-none disabled:bg-background-2/40 disabled:text-black-400 dark:border-black-600'
                 type={question.type}
                 required
+                disabled={disabled}
               />
             ) : (
               <textarea
                 rows={6}
-                className='default-animation rounded-2xl border border-lightBlue bg-background-2 px-3 py-4 outline-none dark:border-black-600'
+                className='default-animation rounded-2xl border border-lightBlue bg-background-2 px-3 py-4 outline-none disabled:bg-background-2/40 disabled:text-black-400 dark:border-black-600'
                 required
+                disabled={disabled}
               />
             )}
           </Form.Control>
@@ -86,7 +67,10 @@ const ContactForm = () => {
       ))}
       <Form.Submit asChild>
         <div className='flex justify-end'>
-          <button className='default-animation rounded-full bg-primary px-12 py-3 hover:bg-primary/70'>
+          <button
+            className='default-animation rounded-full bg-primary px-12 py-3 hover:bg-primary/70 disabled:bg-primary/40 disabled:text-black-400'
+            disabled={disabled}
+          >
             Send
           </button>
         </div>
