@@ -43,6 +43,10 @@ import InstagramIcon from '@/public/icons/social/instagram.svg';
 import XIcon from '@/public/icons/social/x.svg';
 import LinkedInIcon from '@/public/icons/social/linkedin.svg';
 import GithubSocialIcon from '@/public/icons/social/github.svg';
+import PhoneIcon from '@/public/phone.svg';
+import EmailIcon from '@/public/email.svg';
+
+export * from './components';
 
 export function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -154,6 +158,8 @@ export {
   XIcon,
   LinkedInIcon,
   GithubSocialIcon,
+  PhoneIcon,
+  EmailIcon,
 };
 
 export const techDefs = [

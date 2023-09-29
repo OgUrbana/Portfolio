@@ -35,6 +35,7 @@ const config: Config = {
         success: '#02BC7D',
         lightBlue: '#CCE1FF',
         'black-600': '#2C3C56',
+        error: '#FF4C4C',
       },
       fontSize: {
         sm: ['0.875rem', '155%'],

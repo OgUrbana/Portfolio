@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+import { ReCaptchaProvider } from 'next-recaptcha-v3';
 
 import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
@@ -29,7 +30,9 @@ export default function RootLayout({
           <header className='sticky top-0 z-40 backdrop-blur transition-colors duration-500 lg:z-50'>
             <Navigation />
           </header>
-          <main className=''>{children}</main>
+          <main className=''>
+            <ReCaptchaProvider>{children}</ReCaptchaProvider>
+          </main>
           <Footer />
         </ThemeProvider>
       </body>
