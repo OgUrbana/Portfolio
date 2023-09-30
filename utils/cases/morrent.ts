@@ -1,5 +1,5 @@
+import { Case } from '@/types';
 import { Morrent, getProjects, MorrentProblem } from '..';
-import { Case } from '../type';
 
 export const morrentCase = {
   name: 'Morent',
