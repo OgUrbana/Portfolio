@@ -68,7 +68,7 @@ const ContactForm = () => {
       <Form.Submit asChild>
         <div className='flex justify-end'>
           <button
-            className='default-animation rounded-full bg-primary px-12 py-3 hover:bg-primary/70 disabled:bg-primary/40 disabled:text-black-400'
+            className='default-animation w-full rounded-full bg-primary px-12 py-3 hover:bg-primary/70 disabled:bg-primary/40 disabled:text-black-400 lg:w-fit'
             disabled={disabled}
           >
             Send
