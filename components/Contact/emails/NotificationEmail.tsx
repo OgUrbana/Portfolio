@@ -1,4 +1,4 @@
-import { emailData } from '@/utils';
+import { emailData } from '@/types';
 
 const NotificationEmail = ({ name, email, project, contact }: emailData) => {
   return (

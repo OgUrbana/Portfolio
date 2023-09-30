@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-import NotificationEmail from '@/components/Contact/NotificationEmail';
+import { ConfirmationEmail, NotificationEmail } from '@/components';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -25,9 +25,16 @@ export async function POST(request: Request) {
     if (response.success) {
       await resend.emails.send({
         from: 'noreply@gajo.dev',
-        to: [email as string],
+        to: ['matthew.gajo@gmail.com'],
         subject: `${name} - Wants to get in touch.`,
         react: NotificationEmail({ name, email, contact, project }),
+      });
+
+      await resend.emails.send({
+        from: 'noreply@gajo.dev',
+        to: [email as string],
+        subject: 'Confirmation Email - Matthew Gajo',
+        react: ConfirmationEmail({ name }),
       });
     }
 
