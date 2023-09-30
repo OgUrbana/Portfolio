@@ -1,13 +1,11 @@
 'use client';
 
-import React from 'react';
 import { useTheme } from 'next-themes';
 import { Listbox, Transition } from '@headlessui/react';
-import SunIcon from '@/public/icons/sun.svg';
-import MoonIcon from '@/public/icons/moon.svg';
-import MonitorIcon from '@/public/icons/monitor.svg';
-import { SettingsType } from './types';
+
 import SelectedIcon from './SelectedIcon';
+import { SettingsType } from '@/types';
+import { MoonIcon, NavMonitorIcon, SunIcon } from '@/utils';
 
 const settings: SettingsType[] = [
   {
@@ -28,7 +26,7 @@ const settings: SettingsType[] = [
     value: 'system',
     label: 'System',
     icon: (selected, className) => (
-      <MonitorIcon selected={selected} className={className} />
+      <NavMonitorIcon selected={selected} className={className} />
     ),
   },
 ];

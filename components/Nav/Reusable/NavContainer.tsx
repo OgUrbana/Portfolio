@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, ReactNode } from 'react';
+import { useEffect, useState, ReactNode } from 'react';
 
 const NavContainer = ({ children }: { children: ReactNode }) => {
   const [isScroll, setIsScroll] = useState(false);

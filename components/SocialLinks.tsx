@@ -1,4 +1,4 @@
-import { GithubSocialIcon, InstagramIcon, LinkedInIcon, XIcon } from '@/utils';
+import { InstagramIcon, XIcon, LinkedInIcon, GithubSocialIcon } from '@/utils';
 import Link from 'next/link';
 
 const SocialLinks = ({ className }: { className?: string }) => {

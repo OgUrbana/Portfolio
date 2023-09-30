@@ -1,5 +1,5 @@
+import { Study } from '@/components/Case';
 import GetInTouch from '@/components/GetInTouch';
-import Study from '@/components/Case/Study';
 import { cases } from '@/utils';
 
 const CaseStudies = () => {

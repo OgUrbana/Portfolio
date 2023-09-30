@@ -1,8 +1,11 @@
+'use client';
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import Download from '@/public/icons/download.svg';
+
+import { Download } from '@/utils';
 
 const links = [
   {
