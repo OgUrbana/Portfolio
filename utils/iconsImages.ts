@@ -59,6 +59,7 @@ import MoonIcon from '@/public/icons/moon.svg';
 import NavMonitorIcon from '@/public/icons/monitor.svg';
 import BGPatternLG from '@/public/assets/BGPatternLG.png';
 import BGPatternSM from '@/public/assets/BGPatternSM.png';
+import JobProblem from '@/public/assets/jobproblem.jpg';
 
 export {
   SunIcon,
@@ -122,4 +123,5 @@ export {
   MongoIcon,
   BGPatternLG,
   BGPatternSM,
+  JobProblem,
 };
