@@ -57,6 +57,15 @@ import Divider from '@/public/icons/divider.svg';
 import SunIcon from '@/public/icons/sun.svg';
 import MoonIcon from '@/public/icons/moon.svg';
 import NavMonitorIcon from '@/public/icons/monitor.svg';
+import BGPatternLG from '@/public/assets/BGPatternLG.png';
+import BGPatternSM from '@/public/assets/BGPatternSM.png';
+import JobProblem from '@/public/assets/jobproblem.jpg';
+import SlackIcon from '@/public/icons/companies/slack.svg';
+import FireFoxIcon from '@/public/icons/companies/firefox.svg';
+import DigitalOceanIcon from '@/public/icons/companies/digitalocean.svg';
+import MailchimpIcon from '@/public/icons/companies/mailchimp.svg';
+import ContactRight from '@/public/assets/ContactRight.png';
+import EclipseLeft from '@/public/assets/EclipseLeft.png';
 
 export {
   SunIcon,
@@ -118,4 +127,13 @@ export {
   HeadlessIcon,
   RadixIcon,
   MongoIcon,
+  BGPatternLG,
+  BGPatternSM,
+  JobProblem,
+  SlackIcon,
+  FireFoxIcon,
+  DigitalOceanIcon,
+  MailchimpIcon,
+  ContactRight,
+  EclipseLeft,
 };

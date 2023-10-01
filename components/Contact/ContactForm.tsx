@@ -47,6 +47,7 @@ const ContactForm = () => {
                 type={question.type}
                 required
                 disabled={disabled}
+                autoComplete={question.type}
               />
             ) : (
               <textarea
@@ -68,7 +69,7 @@ const ContactForm = () => {
       <Form.Submit asChild>
         <div className='flex justify-end'>
           <button
-            className='default-animation w-full rounded-full bg-primary px-12 py-3 hover:bg-primary/70 disabled:bg-primary/40 disabled:text-black-400 lg:w-fit'
+            className='default-animation w-full rounded-full bg-primary px-12 py-3 text-white hover:bg-primary/70 disabled:bg-primary/40 disabled:text-black-400 lg:w-fit'
             disabled={disabled}
           >
             Send
