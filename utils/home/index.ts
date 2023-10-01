@@ -1,10 +1,14 @@
 import {
   AllMight,
   AnalyticsIcon,
+  DigitalOceanIcon,
+  FireFoxIcon,
+  MailchimpIcon,
   MonitorIcon,
   OptimizeIcon,
   PlaceholderUser,
   ServerIcon,
+  SlackIcon,
 } from '..';
 
 export const reviews = [
@@ -46,5 +50,32 @@ export const services = [
     title: 'Web Optimization',
     desc: 'Web optimization focuses on improving website performance for a smoother user experience',
     icon: OptimizeIcon,
+  },
+];
+
+export const experience = [
+  {
+    title: 'Slack',
+    desc: 'Product Design - 4 Years Experience',
+    icon: SlackIcon,
+    link: 'https://slack.com/',
+  },
+  {
+    title: 'Firefox',
+    desc: 'Sr. UI Design - 4 Years Experience',
+    icon: FireFoxIcon,
+    link: 'https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com',
+  },
+  {
+    title: 'Digital Ocean',
+    desc: 'UI & Motion Designer - 4 Years Experience',
+    icon: DigitalOceanIcon,
+    link: 'https://www.digitalocean.com/',
+  },
+  {
+    title: 'Mailchimp',
+    desc: 'UI Designer - 4 Years Experience',
+    icon: MailchimpIcon,
+    link: 'https://mailchimp.com/',
   },
 ];

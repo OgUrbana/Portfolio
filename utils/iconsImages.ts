@@ -60,6 +60,10 @@ import NavMonitorIcon from '@/public/icons/monitor.svg';
 import BGPatternLG from '@/public/assets/BGPatternLG.png';
 import BGPatternSM from '@/public/assets/BGPatternSM.png';
 import JobProblem from '@/public/assets/jobproblem.jpg';
+import SlackIcon from '@/public/icons/companies/slack.svg';
+import FireFoxIcon from '@/public/icons/companies/firefox.svg';
+import DigitalOceanIcon from '@/public/icons/companies/digitalocean.svg';
+import MailchimpIcon from '@/public/icons/companies/mailchimp.svg';
 
 export {
   SunIcon,
@@ -124,4 +128,8 @@ export {
   BGPatternLG,
   BGPatternSM,
   JobProblem,
+  SlackIcon,
+  FireFoxIcon,
+  DigitalOceanIcon,
+  MailchimpIcon,
 };

@@ -1,36 +1,7 @@
 import LineDecoration from '@/public/linedecoration.svg';
-import SlackIcon from '@/public/icons/companies/slack.svg';
-import FireFoxIcon from '@/public/icons/companies/firefox.svg';
-import DigitalOceanIcon from '@/public/icons/companies/digitalocean.svg';
-import MailchimpIcon from '@/public/icons/companies/mailchimp.svg';
-import Link from 'next/link';
+import { experience } from '@/utils';
 
-const experience = [
-  {
-    title: 'Slack',
-    desc: 'Product Design - 4 Years Experience',
-    icon: SlackIcon,
-    link: 'https://slack.com/',
-  },
-  {
-    title: 'Firefox',
-    desc: 'Sr. UI Design - 4 Years Experience',
-    icon: FireFoxIcon,
-    link: 'https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com',
-  },
-  {
-    title: 'Digital Ocean',
-    desc: 'UI & Motion Designer - 4 Years Experience',
-    icon: DigitalOceanIcon,
-    link: 'https://www.digitalocean.com/',
-  },
-  {
-    title: 'Mailchimp',
-    desc: 'UI Designer - 4 Years Experience',
-    icon: MailchimpIcon,
-    link: 'https://mailchimp.com/',
-  },
-];
+import Link from 'next/link';
 
 const Experience = () => {
   return (
