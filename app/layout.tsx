@@ -16,7 +16,21 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: 'Matthew Gajo',
-  description: 'Portfolio Website',
+  description: 'Portfolio - Matthew Gajo',
+  openGraph: {
+    title: 'Matthew Gajo',
+    description: 'Full Stack React/NextJS Developer',
+    url: 'https://gajo.dev',
+    siteName: 'Matthew Gajo - Portfolio',
+    images: [
+      {
+        url: '/assets/me.png',
+        width: 400,
+        height: 400,
+        alt: 'Picture of Matthew Gajo',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
