@@ -31,7 +31,7 @@ export default function RootLayout({
           <header className='sticky top-0 z-40 backdrop-blur transition-colors duration-500 lg:z-50'>
             <Navigation />
           </header>
-          <main className=''>
+          <main>
             <ReCaptchaProvider>{children}</ReCaptchaProvider>
           </main>
           <Footer />
