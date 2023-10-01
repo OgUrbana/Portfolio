@@ -1,43 +1,14 @@
 import LineDecoration from '@/public/linedecoration.svg';
-import SlackIcon from '@/public/icons/companies/slack.svg';
-import FireFoxIcon from '@/public/icons/companies/firefox.svg';
-import DigitalOceanIcon from '@/public/icons/companies/digitalocean.svg';
-import MailchimpIcon from '@/public/icons/companies/mailchimp.svg';
-import Link from 'next/link';
+import { experience } from '@/utils';
 
-const experience = [
-  {
-    title: 'Slack',
-    desc: 'Product Design - 4 Years Experience',
-    icon: SlackIcon,
-    link: 'https://slack.com/',
-  },
-  {
-    title: 'Firefox',
-    desc: 'Sr. UI Design - 4 Years Experience',
-    icon: FireFoxIcon,
-    link: 'https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com',
-  },
-  {
-    title: 'Digital Ocean',
-    desc: 'UI & Motion Designer - 4 Years Experience',
-    icon: DigitalOceanIcon,
-    link: 'https://www.digitalocean.com/',
-  },
-  {
-    title: 'Mailchimp',
-    desc: 'UI Designer - 4 Years Experience',
-    icon: MailchimpIcon,
-    link: 'https://mailchimp.com/',
-  },
-];
+import Link from 'next/link';
 
 const Experience = () => {
   return (
     <section className='padding-layout flex w-full flex-col items-center justify-between gap-8 md:flex-row'>
       <div className='flex w-full flex-col gap-8 rounded-xl bg-black-200 p-16 dark:bg-white-800 md:w-1/2 md:max-w-[450px]'>
         <h2 className='text-3xl text-white dark:text-black'>
-          Work <span className='yellow-gradient'>Experience</span>
+          Dev <span className='yellow-gradient'>Experience</span>
         </h2>
         <p className='text-sm text-white dark:text-white-500 lg:text-lg'>
           Progress and milestones. A simple walkthrough of roles, projects, and

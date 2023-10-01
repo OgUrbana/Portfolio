@@ -20,7 +20,7 @@ const CaseStudies = () => {
         </div>
       </section>
       <section className='h-full bg-background-1'>
-        <div className='padding-layout flex flex-col place-items-center justify-center gap-8 pt-20 md:grid-cols-2 md:flex-row md:gap-12'>
+        <div className='padding-layout grid place-items-center justify-center gap-8 pt-20 md:grid-cols-2 md:flex-row md:gap-12'>
           {cases.map((study) => (
             <Study
               study={study}

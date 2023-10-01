@@ -11,7 +11,8 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'contact-banner': 'url("/public/contactbanner.png")',
+        BGLarge: "url('/assets/BGPatternLG.png')",
+        BGSmall: "url('/assets/BGPatternSM.png')",
       },
       colors: {
         ...blackA,
