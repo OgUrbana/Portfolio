@@ -1,8 +1,23 @@
+import { ContactRight, EclipseLeft } from '@/utils';
+import Image from 'next/image';
+
 const GetInTouch = () => {
   return (
-    <section className='padding-layout flex justify-center pb-16'>
-      <div className='h-80 rounded-3xl bg-secondary bg-BGSmall bg-contain sm:bg-BGLarge'>
-        <div className='flex h-full flex-col items-center justify-center gap-4 px-10 lg:flex-row lg:justify-between lg:px-16 '>
+    <section className='padding-layout relative flex justify-center pb-16'>
+      <div className='relative h-80 rounded-3xl bg-secondary'>
+        <Image
+          src={EclipseLeft}
+          priority
+          alt='Contact Banner SemiCircle'
+          className='absolute left-0 h-full rounded-3xl'
+        />
+        <Image
+          src={ContactRight}
+          priority
+          alt='Contact Banner Random Shapes'
+          className='absolute right-0 h-full rounded-3xl'
+        />
+        <div className='relative z-10 flex h-full flex-col items-center justify-center gap-4 px-10 lg:flex-row lg:justify-between lg:px-16'>
           <h3 className='w-full font-extrabold text-black md:w-2/3'>
             Have a project in mind? that required technical expertise?
           </h3>

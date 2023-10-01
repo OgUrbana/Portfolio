@@ -64,6 +64,8 @@ import SlackIcon from '@/public/icons/companies/slack.svg';
 import FireFoxIcon from '@/public/icons/companies/firefox.svg';
 import DigitalOceanIcon from '@/public/icons/companies/digitalocean.svg';
 import MailchimpIcon from '@/public/icons/companies/mailchimp.svg';
+import ContactRight from '@/public/assets/ContactRight.png';
+import EclipseLeft from '@/public/assets/EclipseLeft.png';
 
 export {
   SunIcon,
@@ -132,4 +134,6 @@ export {
   FireFoxIcon,
   DigitalOceanIcon,
   MailchimpIcon,
+  ContactRight,
+  EclipseLeft,
 };
