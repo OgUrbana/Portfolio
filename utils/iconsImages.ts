@@ -57,6 +57,8 @@ import Divider from '@/public/icons/divider.svg';
 import SunIcon from '@/public/icons/sun.svg';
 import MoonIcon from '@/public/icons/moon.svg';
 import NavMonitorIcon from '@/public/icons/monitor.svg';
+import BGPatternLG from '@/public/assets/BGPatternLG.png';
+import BGPatternSM from '@/public/assets/BGPatternSM.png';
 
 export {
   SunIcon,
@@ -118,4 +120,6 @@ export {
   HeadlessIcon,
   RadixIcon,
   MongoIcon,
+  BGPatternLG,
+  BGPatternSM,
 };
