@@ -1,6 +1,6 @@
 const GetInTouch = () => {
   return (
-    <section className='padding-layout flex justify-center'>
+    <section className='padding-layout flex justify-center pb-16'>
       <div className='h-80 rounded-3xl bg-secondary bg-BGSmall bg-contain sm:bg-BGLarge'>
         <div className='flex h-full flex-col items-center justify-center gap-4 px-10 lg:flex-row lg:justify-between lg:px-16 '>
           <h3 className='w-full font-extrabold text-black md:w-2/3'>

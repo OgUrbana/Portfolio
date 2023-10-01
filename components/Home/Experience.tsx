@@ -37,7 +37,7 @@ const Experience = () => {
     <section className='padding-layout flex w-full flex-col items-center justify-between gap-8 md:flex-row'>
       <div className='flex w-full flex-col gap-8 rounded-xl bg-black-200 p-16 dark:bg-white-800 md:w-1/2 md:max-w-[450px]'>
         <h2 className='text-3xl text-white dark:text-black'>
-          Work <span className='yellow-gradient'>Experience</span>
+          Dev <span className='yellow-gradient'>Experience</span>
         </h2>
         <p className='text-sm text-white dark:text-white-500 lg:text-lg'>
           Progress and milestones. A simple walkthrough of roles, projects, and
