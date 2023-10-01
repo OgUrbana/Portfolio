@@ -1,5 +1,5 @@
 import { Case } from '@/types';
-import { getProjects, Jobit, JobProblem, MorrentProblem } from '..';
+import { getProjects, Jobit, JobProblem } from '..';
 
 export const jobitCase = {
   description: [
