@@ -33,6 +33,9 @@ const config: Config = {
         jobit: '#0BAB7C',
         challenge: '#E15A46',
         success: '#02BC7D',
+        lightBlue: '#CCE1FF',
+        'black-600': '#2C3C56',
+        error: '#FF4C4C',
       },
       fontSize: {
         sm: ['0.875rem', '155%'],

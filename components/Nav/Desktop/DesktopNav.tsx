@@ -1,12 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
 import { usePathname } from 'next/navigation';
 
-import Download from '@/public/icons/download.svg';
-import Divider from '@/public/icons/divider.svg';
-import ToggleTheme from './ToggleTheme';
+import ToggleTheme from '../Reusable/ToggleTheme';
+import { Download, Divider } from '@/utils';
 
 const DesktopNav = () => {
   const pathname = usePathname();

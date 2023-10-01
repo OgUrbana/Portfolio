@@ -1,10 +1,10 @@
+import { Study } from '@/components/Case';
 import GetInTouch from '@/components/GetInTouch';
-import Study from '@/components/Case/Study';
 import { cases } from '@/utils';
 
-const Page = () => {
+const CaseStudies = () => {
   return (
-    <section className='flex flex-col gap-8'>
+    <>
       <section className='padding-layout'>
         <div className='flex justify-center text-center'>
           <div className='flex w-[80%] flex-col gap-6 md:my-12 xl:w-[55%]'>
@@ -19,7 +19,7 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className='bg-background-1'>
+      <section className='h-full bg-background-1'>
         <div className='padding-layout flex flex-col place-items-center justify-center gap-8 pt-20 md:grid-cols-2 md:flex-row md:gap-12'>
           {cases.map((study) => (
             <Study
@@ -28,10 +28,12 @@ const Page = () => {
             />
           ))}
         </div>
-        <GetInTouch />
       </section>
-    </section>
+      <div className='flex h-full w-full flex-1 grow bg-background-1 pt-12'>
+        <GetInTouch />
+      </div>
+    </>
   );
 };
 
-export default Page;
+export default CaseStudies;

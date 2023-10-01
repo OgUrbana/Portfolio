@@ -1,7 +1,4 @@
-import React from 'react';
-import NavContainer from './NavContainer';
-import DesktopNav from './DesktopNav';
-import MobileNav from './MobileNav/MobileNav';
+import { NavContainer, DesktopNav, MobileNav } from '.';
 
 const Navigation = () => {
   return (

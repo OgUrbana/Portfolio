@@ -1,4 +1,4 @@
-import { Case } from '@/utils/type';
+import { Case } from '@/types';
 import {
   CaseHero,
   CaseStats,

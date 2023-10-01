@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import { techDefs } from '@/utils';
-import { Tech } from '@/utils/type';
+import { Tech } from '@/types';
 
 const Technologies = ({ tech }: { tech: Tech[] }) => {
   // Filter for only technologies listed

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { GlobeIcon, RightArrow, GithubIcon } from '@/utils';
-import { Case } from '@/utils/type';
+import { Case } from '@/types';
 
 const CaseHero = ({ data }: { data: Case }) => {
   const { name, preview, hero } = data;

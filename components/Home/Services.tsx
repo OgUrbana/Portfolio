@@ -1,32 +1,4 @@
-import React from 'react';
-
-import AnalyticsIcon from '@/public/icons/services/analytics.svg';
-import MonitorIcon from '@/public/icons/services/monitor.svg';
-import ServerIcon from '@/public/icons/services/server.svg';
-import OptimizeIcon from '@/public/icons/services/optimize.svg';
-
-const services = [
-  {
-    title: 'Analytics & SEO',
-    desc: 'Implement tracking & analytics tools to monitor website performance & improve SEO.',
-    icon: AnalyticsIcon,
-  },
-  {
-    title: 'Front-End Dev',
-    desc: 'Front-end dev includes creating the user interface and interactive elements of websites and apps.',
-    icon: MonitorIcon,
-  },
-  {
-    title: 'Back-End Dev',
-    desc: 'Back-end dev includes managing API, integrate elements, and managing data.',
-    icon: ServerIcon,
-  },
-  {
-    title: 'Web Optimization',
-    desc: 'Web optimization focuses on improving website performance for a smoother user experience',
-    icon: OptimizeIcon,
-  },
-];
+import { services } from '@/utils';
 
 const Services = () => {
   return (

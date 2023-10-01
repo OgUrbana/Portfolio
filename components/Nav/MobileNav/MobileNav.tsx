@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Hamburger from '../../SVG/Hamburger';
-import ToggleTheme from '../ToggleTheme';
 import { useCycle, motion } from 'framer-motion';
+import { ToggleTheme } from '..';
 import MobileNavLinks from './MobileNavLinks';
 
 const sidebar = {

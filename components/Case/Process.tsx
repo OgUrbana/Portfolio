@@ -1,4 +1,4 @@
-import { workProcess } from '@/utils/cases';
+import { workProcess } from '@/utils/cases/reusable';
 import Image from 'next/image';
 
 const Process = () => {

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
 @layer base {
   :root {
     --color-primary: 2 82 205;
@@ -76,13 +80,13 @@
 
   /* Typography */
   .base {
-    @apply font-normal;
-    font-size: 1.5rem;
+    @apply font-light;
+    font-size: 1.25rem;
     line-height: 130%;
   }
   .base-bold {
     @apply font-semibold;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 130%;
   }
   .padding-layout {
