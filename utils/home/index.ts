@@ -67,7 +67,7 @@ export const experience = [
   },
   {
     title: 'Self Study',
-    desc: 'Full Stack Development and Design Principals 4 Years',
+    desc: 'Full Stack Development and Design Principals - 4 Years',
     icon: StudentEmoji,
     link: 'https://www.digitalocean.com/',
   },
