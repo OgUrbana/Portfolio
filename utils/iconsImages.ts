@@ -66,6 +66,7 @@ import DigitalOceanIcon from '@/public/icons/companies/digitalocean.svg';
 import MailchimpIcon from '@/public/icons/companies/mailchimp.svg';
 import ContactRight from '@/public/assets/ContactRight.png';
 import EclipseLeft from '@/public/assets/EclipseLeft.png';
+import HeroImage from '@/public/hero.svg';
 
 export {
   SunIcon,
@@ -136,4 +137,5 @@ export {
   MailchimpIcon,
   ContactRight,
   EclipseLeft,
+  HeroImage,
 };

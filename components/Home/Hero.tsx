@@ -3,12 +3,13 @@ import React from 'react';
 
 import CopyButton from './CopyButton';
 import Hello from './Hello';
+import { HeroImage } from '@/utils';
 
 type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <section className='padding-layout flex flex-col items-center justify-between text-center sm:text-left xl:flex-row'>
+    <div className='padding-layout flex h-[calc(100vh-7.5rem)] flex-col items-center justify-center text-center sm:text-left xl:flex-row'>
       <div className='flex flex-col gap-6 xl:w-5/12 xl:gap-8'>
         <Hello />
         <h1 className='text-5xl !leading-tight'>
@@ -30,12 +31,15 @@ const Hero = (props: Props) => {
           <CopyButton content='matthewgajo@gmail.com' />
         </div>
       </div>
-      <div className='flex justify-center'>
+      <div className='mx-auto hidden xl:block'>
+        <HeroImage />
+        {/* 
+        Need to change to Framer Motion, video sucks 🤮
         <video autoPlay loop muted playsInline>
           <source src='/comp.webm' type='video/webm' />
-        </video>
+        </video> */}
       </div>
-    </section>
+    </div>
   );
 };
 
