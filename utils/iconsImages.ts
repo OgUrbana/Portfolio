@@ -74,6 +74,9 @@ import AEIcon from '@/public/icons/companies/AE.svg';
 import GHFilled from '@/public/icons/companies/gh-filled.svg';
 import AsanaIcon from '@/public/icons/companies/asana.svg';
 import DiscordIcon from '@/public/icons/companies/discord.svg';
+import JSMIcon from '@/public/icons/companies/jsm-logo.svg';
+import HarvardIcon from '@/public/icons/companies/harvard.svg';
+import StudentEmoji from '@/public/assets/studentemoji.svg';
 
 export {
   SunIcon,
@@ -152,4 +155,7 @@ export {
   GHFilled,
   AsanaIcon,
   DiscordIcon,
+  JSMIcon,
+  HarvardIcon,
+  StudentEmoji,
 };

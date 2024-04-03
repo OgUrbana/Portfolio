@@ -1,14 +1,13 @@
 import {
   AllMight,
   AnalyticsIcon,
-  DigitalOceanIcon,
-  FireFoxIcon,
-  MailchimpIcon,
+  HarvardIcon,
+  JSMIcon,
   MonitorIcon,
   OptimizeIcon,
   PlaceholderUser,
   ServerIcon,
-  SlackIcon,
+  StudentEmoji,
 } from '..';
 
 export const reviews = [
@@ -55,27 +54,21 @@ export const services = [
 
 export const experience = [
   {
-    title: 'Slack',
-    desc: 'Product Design - 4 Years Experience',
-    icon: SlackIcon,
-    link: 'https://slack.com/',
+    title: 'JSM Master Class',
+    desc: 'Full Stack Web Development Bootcamp - 6 Months',
+    icon: JSMIcon,
+    link: 'https://www.jsmastery.pro/',
   },
   {
-    title: 'Firefox',
-    desc: 'Sr. UI Design - 4 Years Experience',
-    icon: FireFoxIcon,
-    link: 'https://www.mozilla.org/en-US/firefox/new/?redirect_source=firefox-com',
+    title: 'HarvardX',
+    desc: 'Programming & Computer Science',
+    icon: HarvardIcon,
+    link: 'https://www.edx.org/school/harvardx',
   },
   {
-    title: 'Digital Ocean',
-    desc: 'UI & Motion Designer - 4 Years Experience',
-    icon: DigitalOceanIcon,
+    title: 'Self Study',
+    desc: 'Full Stack Development and Design Principals 4 Years',
+    icon: StudentEmoji,
     link: 'https://www.digitalocean.com/',
-  },
-  {
-    title: 'Mailchimp',
-    desc: 'UI Designer - 4 Years Experience',
-    icon: MailchimpIcon,
-    link: 'https://mailchimp.com/',
   },
 ];
