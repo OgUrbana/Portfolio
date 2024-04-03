@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import {
   JSIcon,
   ReactIcon,
@@ -22,9 +20,8 @@ import {
 
 const icons = [
   JSIcon,
-  ReactIcon,
-  NextIcon,
   TSIcon,
+  ReactIcon,
   HTMLIcon,
   CSSIcon,
   TailwindIcon,
@@ -33,33 +30,22 @@ const icons = [
   MongoIcon,
   GitIcon,
   MaterialIcon,
-  GithubIcon,
   SassIcon,
   HeadlessIcon,
 ];
 
 const SkillIcons = () => {
   return (
-    <section className='flex flex-wrap items-center justify-center gap-8'>
+    <div className='flex max-w-3xl flex-wrap items-center justify-center gap-8'>
       {icons.map((Component, key) => (
         <figure
           key={key}
-          className='shrink-0 cursor-pointer rounded-full p-5 transition ease-in-out hover:scale-125 dark:bg-black-300'
+          className='group shrink-0 cursor-pointer rounded-full p-5 transition ease-in-out hover:scale-105 dark:bg-black-300'
         >
-          <Component className='h-8 w-8' />
+          <Component className='h-8 w-8 transition ease-in-out group-hover:scale-125 group-hover:grayscale-0 lg:grayscale' />
         </figure>
       ))}
-      <figure className='shrink-0 cursor-pointer rounded-full p-5 transition ease-in-out hover:scale-125 dark:bg-black-300'>
-        <Image src={SupabaseIcon} className='h-8 w-8' alt='supabase logo' />
-      </figure>
-      <figure className='shrink-0 cursor-pointer rounded-full p-5 transition ease-in-out hover:scale-125 dark:bg-black-300'>
-        <Image
-          src={RadixIcon}
-          className='h-8 w-8 rounded-lg'
-          alt='supabase logo'
-        />
-      </figure>
-    </section>
+    </div>
   );
 };
 
