@@ -1,40 +1,4 @@
-import {
-  JSIcon,
-  ReactIcon,
-  NextIcon,
-  TSIcon,
-  HTMLIcon,
-  CSSIcon,
-  TailwindIcon,
-  FramerIcon,
-  NodeIcon,
-  MongoIcon,
-  GitIcon,
-  MaterialIcon,
-  GithubIcon,
-  SassIcon,
-  HeadlessIcon,
-  SupabaseIcon,
-  RadixIcon,
-} from '@/utils';
-
-const icons = [
-  JSIcon,
-  TSIcon,
-  ReactIcon,
-  HTMLIcon,
-  CSSIcon,
-  TailwindIcon,
-  FramerIcon,
-  NodeIcon,
-  MongoIcon,
-  GitIcon,
-  MaterialIcon,
-  SassIcon,
-  HeadlessIcon,
-];
-
-const SkillIcons = () => {
+const SkillIcons = ({ icons }: { icons: any[] }) => {
   return (
     <div className='flex max-w-3xl flex-wrap items-center justify-center gap-8'>
       {icons.map((Component, key) => (

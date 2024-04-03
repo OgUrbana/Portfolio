@@ -2,10 +2,9 @@
 
 import { Tab } from '@headlessui/react';
 import React from 'react';
-// import ProgressBar from './ProgressBar';
 import { classNames } from '@/utils';
-import { SkillIcons } from '.';
 import ScreenText from '@/components/ScreenText';
+import TabIcons from './TabIcons';
 
 const tabs = [
   { lg: 'Web Development', sm: 'Web' },
@@ -34,8 +33,15 @@ const SkillsTab = () => {
         </div>
       </Tab.List>
       <Tab.Panels>
+        {/* Find alternative. I dont really like this design. */}
         <Tab.Panel>
-          <SkillIcons />
+          <TabIcons type='dev' />
+        </Tab.Panel>
+        <Tab.Panel>
+          <TabIcons type='design' />
+        </Tab.Panel>
+        <Tab.Panel>
+          <TabIcons type='com' />
         </Tab.Panel>
         {/* 
         Another mistake 😑

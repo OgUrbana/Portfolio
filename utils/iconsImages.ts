@@ -67,6 +67,13 @@ import MailchimpIcon from '@/public/icons/companies/mailchimp.svg';
 import ContactRight from '@/public/assets/ContactRight.png';
 import EclipseLeft from '@/public/assets/EclipseLeft.png';
 import HeroImage from '@/public/hero.svg';
+import FigmaIcon from '@/public/icons/companies/figma.svg';
+import PSIcon from '@/public/icons/companies/photoshop.svg';
+import CCIcon from '@/public/icons/companies/cc.svg';
+import AEIcon from '@/public/icons/companies/AE.svg';
+import GHFilled from '@/public/icons/companies/gh-filled.svg';
+import AsanaIcon from '@/public/icons/companies/asana.svg';
+import DiscordIcon from '@/public/icons/companies/discord.svg';
 
 export {
   SunIcon,
@@ -138,4 +145,11 @@ export {
   ContactRight,
   EclipseLeft,
   HeroImage,
+  FigmaIcon,
+  PSIcon,
+  CCIcon,
+  AEIcon,
+  GHFilled,
+  AsanaIcon,
+  DiscordIcon,
 };

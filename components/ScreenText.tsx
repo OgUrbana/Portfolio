@@ -34,9 +34,14 @@ const ScreenText = ({
   largeText: string;
   breakpoint?: number;
 }) => {
+  const [isClient, setIsClient] = useState(false);
   const { width } = useWindowSize();
 
-  return width >= breakpoint ? largeText : smallText;
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  return isClient ?? width >= breakpoint ? largeText : smallText;
 };
 
 export default ScreenText;
