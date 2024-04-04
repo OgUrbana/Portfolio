@@ -19,7 +19,12 @@ const Technologies = ({ tech }: { tech: Tech[] }) => {
   return (
     <figure className='flex h-fit w-fit flex-wrap justify-center gap-8 rounded-xl bg-background-2 p-4 lg:rounded-full'>
       {filteredTech.map((tech) => (
-        <Link href={tech.link} key={tech.name} aria-label={tech.name}>
+        <Link
+          target='_blank'
+          href={tech.link}
+          key={tech.name}
+          aria-label={tech.name}
+        >
           <tech.icon
             className={`default-animation h-8 w-8 hover:scale-125 ${
               tech.name === 'next' ? 'fill-black dark:fill-white' : ''
