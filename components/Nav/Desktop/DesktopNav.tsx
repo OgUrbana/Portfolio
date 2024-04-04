@@ -10,7 +10,7 @@ const DesktopNav = () => {
   const pathname = usePathname();
 
   return (
-    <section className='padding-layout hidden items-center justify-between py-9 md:flex'>
+    <section className='padding-layout hidden items-center justify-between py-4 md:flex'>
       <Link href='/' aria-label='Home'>
         Matthew Gajo
       </Link>

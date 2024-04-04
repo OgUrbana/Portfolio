@@ -9,7 +9,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <div className='padding-layout flex h-[calc(100vh-7.5rem)] flex-col items-center justify-center text-center sm:text-left xl:flex-row'>
+    <div className='padding-layout flex h-[calc(100vh-5rem)] flex-col items-center justify-center text-center sm:text-left xl:flex-row'>
       <div className='flex flex-col gap-6 xl:w-5/12 xl:gap-8'>
         <Hello />
         <h1 className='text-5xl !leading-tight'>

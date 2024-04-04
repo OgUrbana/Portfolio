@@ -2,7 +2,6 @@ import GetInTouch from '@/components/GetInTouch';
 import Experience from '@/components/Home/Experience';
 import FeaturedProjects from '@/components/Home/FeaturedProjects';
 import Hero from '@/components/Home/Hero';
-import Reviews from '@/components/Home/Reviews';
 import Services from '@/components/Home/Services';
 import Skills from '@/components/Home/Skills/Skills';
 
