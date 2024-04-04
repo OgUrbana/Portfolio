@@ -17,10 +17,11 @@ export default function Home() {
         <FeaturedProjects />
       </section>
       <section className='padding-layout'>
-        <h3 className='text-center'>
+        {/* <h3 className='text-center'>
+          Hidden for now :)
           What do<span className='text-secondary'> people say?</span>
         </h3>
-        <Reviews />
+        <Reviews /> */}
       </section>
       <GetInTouch />
     </section>
