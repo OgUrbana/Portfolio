@@ -1,12 +1,10 @@
-import Link from 'next/link';
 import Image from 'next/image';
 
-import { GlobeIcon, RightArrow, GithubIcon } from '@/utils';
 import { Case } from '@/types';
 
 const CaseHero = ({ data }: { data: Case }) => {
   const { name, preview, hero } = data;
-  const { title, tag, demoLink, source } = hero;
+  const { title, tag } = hero;
 
   return (
     <section className='my-16 flex flex-col items-center justify-center gap-6 text-center'>
@@ -24,7 +22,7 @@ const CaseHero = ({ data }: { data: Case }) => {
         alt='Mobile & Desktop Preview'
         className='p-3'
       />
-      <div className='flex items-center justify-center gap-12 md:gap-32'>
+      {/* <div className='flex items-center justify-center gap-12 md:gap-32'>
         <Link
           href={demoLink}
           className='default-animation group flex items-center gap-2 text-primary hover:text-primary/60'
@@ -41,7 +39,7 @@ const CaseHero = ({ data }: { data: Case }) => {
           <p>Source Code</p>
           <RightArrow className='default-animation stroke-primary group-hover:stroke-primary/60' />
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 };

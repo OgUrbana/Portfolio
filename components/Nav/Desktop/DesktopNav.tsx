@@ -29,7 +29,9 @@ const DesktopNav = () => {
             <Link
               prefetch
               href='/case'
-              className={`${pathname === '/case' ? 'navActive' : 'navLink'}`}
+              className={`${
+                pathname.startsWith('/case') ? 'navActive' : 'navLink'
+              }`}
             >
               Case Studies
             </Link>
@@ -38,7 +40,9 @@ const DesktopNav = () => {
             <Link
               prefetch
               href='/contact'
-              className={`${pathname === '/contact' ? 'navActive' : 'navLink'}`}
+              className={`${
+                pathname.startsWith('/contact') ? 'navActive' : 'navLink'
+              }`}
             >
               Contact
             </Link>
@@ -47,7 +51,9 @@ const DesktopNav = () => {
             <Link
               prefetch
               href='/resume.pdf'
-              className={`${pathname === '/resume' ? 'navActive' : 'navLink'}`}
+              className={`${
+                pathname.startsWith('/resume') ? 'navActive' : 'navLink'
+              }`}
               locale={false}
             >
               <Download width={14} height={15} />
